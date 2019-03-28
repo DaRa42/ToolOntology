@@ -1,0 +1,713 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#"
+     xml:base="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#canHaveInputType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#canHaveInputType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasDatasStructure -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasDatasStructure"/>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasDatatype -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasDatatype"/>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasInputType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasInputType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasParentRegion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasParentRegion">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasSubregion"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasScaletype -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasScaletype"/>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasSubregion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasSubregion">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#needsDataStructure -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#needsDataStructure"/>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#needsInputType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#needsInputType"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasMaxCardinality -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasMaxCardinality">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasMinCardinality -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasMinCardinality">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Name"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://contextus.net/ontology/ontomedia/ext/common/trait#Age -->
+
+    <owl:Class rdf:about="http://contextus.net/ontology/ontomedia/ext/common/trait#Age">
+        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Temporal_Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/places#Region -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/places#Region">
+        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Geographical_Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/viso/data/Data -->
+
+    <owl:Class rdf:about="http://purl.org/viso/data/Data"/>
+    
+
+
+    <!-- http://purl.org/viso/data/Geographical_Data -->
+
+    <owl:Class rdf:about="http://purl.org/viso/data/Geographical_Data">
+        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Spatial_Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/viso/data/Nominal_Scale_of_Measurement -->
+
+    <owl:Class rdf:about="http://purl.org/viso/data/Nominal_Scale_of_Measurement">
+        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Scale_of_Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/viso/data/Ordinal_Scale_of_Measurement -->
+
+    <owl:Class rdf:about="http://purl.org/viso/data/Ordinal_Scale_of_Measurement">
+        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Scale_of_Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/viso/data/Physical_Data -->
+
+    <owl:Class rdf:about="http://purl.org/viso/data/Physical_Data">
+        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/viso/data/Quantitative_Scale_of_Measurement -->
+
+    <owl:Class rdf:about="http://purl.org/viso/data/Quantitative_Scale_of_Measurement">
+        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Scale_of_Measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/viso/data/Scale_of_Measurement -->
+
+    <owl:Class rdf:about="http://purl.org/viso/data/Scale_of_Measurement"/>
+    
+
+
+    <!-- http://purl.org/viso/data/Spatial_Data -->
+
+    <owl:Class rdf:about="http://purl.org/viso/data/Spatial_Data">
+        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Physical_Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/viso/data/Temporal_Data -->
+
+    <owl:Class rdf:about="http://purl.org/viso/data/Temporal_Data">
+        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Physical_Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#DataSet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#DataSet">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasInputType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#InputType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Double -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Double">
+        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#InputType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#InputType">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasDatatype"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/viso/data/Data"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasScaletype"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/viso/data/Scale_of_Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasName"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Integer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Integer">
+        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#String -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#String">
+        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#VisTool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#VisTool">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#needsInputType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#InputType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#ageMax -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#ageMax">
+        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Temporal_Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#ageMin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#ageMin">
+        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Temporal_Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat -->
+
+    <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
+        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Geographical_Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#long -->
+
+    <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
+        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Geographical_Data"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/2006/time#year -->
+
+    <owl:Class rdf:about="https://www.w3.org/2006/time#year">
+        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Temporal_Data"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#DataStructure_Table -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#DataStructure_Table"/>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Age -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Age">
+        <rdf:type rdf:resource="http://contextus.net/ontology/ontomedia/ext/common/trait#Age"/>
+        <hasDatatype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Integer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_AgeMax -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_AgeMax">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#ageMax"/>
+        <hasDatatype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Integer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_AgeMin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_AgeMin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#ageMin"/>
+        <hasDatatype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Integer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Double -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Double">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Double"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Integer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Integer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Integer"/>
+        <hasDatatype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Region"/>
+        <hasScaletype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Nominal"/>
+        <hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMaxCardinality>
+        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMinCardinality>
+        <hasName>region</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Lat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Lat">
+        <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+        <hasDatatype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Double"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Lon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Lon">
+        <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+        <hasDatatype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Double"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Region -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Region">
+        <rdf:type rdf:resource="http://purl.org/ontology/places#Region"/>
+        <hasDatatype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_String"/>
+        <hasSubregion rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Subregion1"/>
+        <hasSubregion rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Subregion2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_String -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_String">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#String"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Subregion1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Subregion1">
+        <rdf:type rdf:resource="http://purl.org/ontology/places#Region"/>
+        <hasDatatype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_String"/>
+        <hasParentRegion rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Region"/>
+        <hasSubregion rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Subregion2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Subregion2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Subregion2">
+        <rdf:type rdf:resource="http://purl.org/ontology/places#Region"/>
+        <hasDatatype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_String"/>
+        <hasParentRegion rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Subregion1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Year -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Year">
+        <rdf:type rdf:resource="https://www.w3.org/2006/time#year"/>
+        <hasDatatype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Integer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#VisTool"/>
+        <canHaveInputType rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputBinary"/>
+        <needsDataStructure rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#DataStructure_Table"/>
+        <needsInputType rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputVariable"/>
+        <needsInputType rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputYear"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MicrofaciesExplorer</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputBinary -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputBinary">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#InputType"/>
+        <hasDatatype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Double"/>
+        <hasScaletype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Ordinal"/>
+        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasMinCardinality>
+        <hasName>toBinary</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputVariable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputVariable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#InputType"/>
+        <hasDatatype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_String"/>
+        <hasScaletype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Nominal"/>
+        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMinCardinality>
+        <hasName>variable</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputYear -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputYear">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#InputType"/>
+        <hasDatatype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Year"/>
+        <hasScaletype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Quantitative"/>
+        <hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMaxCardinality>
+        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMinCardinality>
+        <hasName>year</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Nominal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Nominal">
+        <rdf:type rdf:resource="http://purl.org/viso/data/Nominal_Scale_of_Measurement"/>
+        <hasScaletype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Nominal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Ordinal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Ordinal">
+        <rdf:type rdf:resource="http://purl.org/viso/data/Ordinal_Scale_of_Measurement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Quantitative -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Quantitative">
+        <rdf:type rdf:resource="http://purl.org/viso/data/Quantitative_Scale_of_Measurement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#VisTool"/>
+        <needsDataStructure rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#DataStructure_Table"/>
+        <hasName>Slivisu</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#InputType"/>
+        <hasDatatype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Age"/>
+        <hasScaletype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Quantitative"/>
+        <hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMaxCardinality>
+        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMinCardinality>
+        <hasName>age</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAgeMax -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAgeMax">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#InputType"/>
+        <hasDatatype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_AgeMax"/>
+        <hasScaletype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Quantitative"/>
+        <hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMaxCardinality>
+        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMinCardinality>
+        <hasName>ageMax</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAgeMin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAgeMin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#InputType"/>
+        <hasDatatype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_AgeMin"/>
+        <hasScaletype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Quantitative"/>
+        <hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMaxCardinality>
+        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMinCardinality>
+        <hasName>ageMin</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputCategory -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputCategory">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#InputType"/>
+        <hasDatatype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_String"/>
+        <hasScaletype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Nominal"/>
+        <hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMaxCardinality>
+        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMinCardinality>
+        <hasName>category</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputLat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputLat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#InputType"/>
+        <hasDatatype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Lat"/>
+        <hasScaletype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Ordinal"/>
+        <hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMaxCardinality>
+        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMinCardinality>
+        <hasName>latitude</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputLon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputLon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#InputType"/>
+        <hasDatatype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Lon"/>
+        <hasScaletype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Ordinal"/>
+        <hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMaxCardinality>
+        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMinCardinality>
+        <hasName>Longitude</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputRegion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputRegion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#InputType"/>
+        <hasDatatype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Region"/>
+        <hasScaletype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Nominal"/>
+        <hasSubregion rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion1"/>
+        <hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMaxCardinality>
+        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMinCardinality>
+        <hasName>region</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#InputType"/>
+        <hasDatatype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Subregion1"/>
+        <hasParentRegion rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputRegion"/>
+        <hasScaletype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Nominal"/>
+        <hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMaxCardinality>
+        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMinCardinality>
+        <hasName>subregion1</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#InputType"/>
+        <hasDatatype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Subregion2"/>
+        <hasParentRegion rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion1"/>
+        <hasScaletype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Nominal"/>
+        <hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMaxCardinality>
+        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMinCardinality>
+        <hasName>Subregion2</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputYear -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputYear">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#InputType"/>
+        <hasDatatype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Year"/>
+        <hasScaletype rdf:resource="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Quantitative"/>
+        <hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMaxCardinality>
+        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMinCardinality>
+        <hasName>year</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/viso/data/Nominal_Scale_of_Measurement"/>
+            <rdf:Description rdf:about="http://purl.org/viso/data/Ordinal_Scale_of_Measurement"/>
+            <rdf:Description rdf:about="http://purl.org/viso/data/Quantitative_Scale_of_Measurement"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/viso/data/Physical_Data"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Double"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Integer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#String"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
