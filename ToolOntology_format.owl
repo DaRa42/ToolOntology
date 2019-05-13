@@ -1,0 +1,1569 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl">
+    <Prefix name="" IRI="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="ns" IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="sio" IRI="http://semanticscience.org/ontology/sio/v1.43/sio-release.owl#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="cito" IRI="http://purl.org/spar/cito/"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
+    <Prefix name="viso" IRI="http://purl.org/viso/data/"/>
+    <Prefix name="void" IRI="http://rdfs.org/ns/void#"/>
+    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="schema" IRI="http://schema.org/"/>
+    <Prefix name="protege" IRI="http://protege.stanford.edu/plugins/owl/protege#"/>
+    <Prefix name="resource" IRI="http://semanticscience.org/resource/"/>
+    <Prefix name="ToolOntology" IRI="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#"/>
+    <Import>http://purl.org/viso/data/</Import>
+    <Import>http://semanticscience.org/ontology/sio/v1.43/sio-release.owl</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <Literal>This ToolOntology contains descriptions about certain visualization software tools and their needed Data Input like scaletypes, satatypes and semantic requirements.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Contains classes from http://purl.org/viso/data/</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Contains classes from http://semanticscience.org/ontology/sio.owl</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="viso:Data"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="viso:Geographical_Data"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="viso:Nominal_Scale_of_Measurement"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="viso:Ordinal_Scale_of_Measurement"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="viso:Physical_Data"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="viso:Quantitative_Scale_of_Measurement"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="viso:Scale_of_Measurement"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="viso:Spatial_Data"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="viso:Temporal_Data"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="resource:SIO_000013"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="resource:SIO_000318"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="resource:SIO_000319"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="resource:SIO_000414"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="resource:SIO_001013"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/time#generalYear"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Double"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InputType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Integer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Primitive_Data_Types"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#String"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VisTool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#maxAge"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#minAge"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#canHaveInputType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasDatatype"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasInputType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasParentRegion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasScaletype"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasSubregion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#needsInputType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasMaxCardinality"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasMinCardinality"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/time#days"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/time#hours"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/time#minutes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/time#months"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/time#seconds"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/time#weeks"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/time#years"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Age"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_AgeMax"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_AgeMin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Double"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Integer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Lat"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Lon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Region"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_String"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Subregion1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Subregion2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Year"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputBinary"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputVariable"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputYear"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Nominal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Ordinal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Quantitative"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAge"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAgeMax"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAgeMin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputCategory"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputLat"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputLon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputRegion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputYear"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="resource:example"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:changeNote"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="canHaveInputType"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="needsInputType"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="hasParentRegion"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="hasMinCardinality"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="viso:has_scale_of_measurement"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="hasScaletype"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/viso/graphic/Role"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="hasDatatype"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="void:subset"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/viso/graphic/has"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="viso:Semantic_Data"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="hasMaxCardinality"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="protege:defaultLanguage"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="hasSubregion"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="hasName"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="viso:Geographical_Data"/>
+        <Class abbreviatedIRI="viso:Spatial_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="viso:Nominal_Scale_of_Measurement"/>
+        <Class abbreviatedIRI="viso:Scale_of_Measurement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="viso:Ordinal_Scale_of_Measurement"/>
+        <Class abbreviatedIRI="viso:Scale_of_Measurement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="viso:Physical_Data"/>
+        <Class abbreviatedIRI="viso:Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="viso:Quantitative_Scale_of_Measurement"/>
+        <Class abbreviatedIRI="viso:Scale_of_Measurement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="viso:Spatial_Data"/>
+        <Class abbreviatedIRI="viso:Physical_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="viso:Temporal_Data"/>
+        <Class abbreviatedIRI="viso:Physical_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="resource:SIO_000013"/>
+        <Class abbreviatedIRI="viso:Geographical_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="resource:SIO_000318"/>
+        <Class abbreviatedIRI="resource:SIO_000013"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="resource:SIO_000319"/>
+        <Class abbreviatedIRI="resource:SIO_000013"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="resource:SIO_000414"/>
+        <Class abbreviatedIRI="viso:Geographical_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="resource:SIO_001013"/>
+        <Class abbreviatedIRI="viso:Temporal_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/time#generalYear"/>
+        <Class abbreviatedIRI="viso:Temporal_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Double"/>
+        <Class IRI="#Primitive_Data_Types"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InputType"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasScaletype"/>
+            <Class abbreviatedIRI="viso:Scale_of_Measurement"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InputType"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasPrimitiveType"/>
+            <Class IRI="#Primitive_Data_Types"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InputType"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Integer"/>
+        <Class IRI="#Primitive_Data_Types"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Primitive_Data_Types"/>
+        <Class abbreviatedIRI="viso:Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#String"/>
+        <Class IRI="#Primitive_Data_Types"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VisTool"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#needsInputType"/>
+            <Class IRI="#InputType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#maxAge"/>
+        <Class abbreviatedIRI="viso:Temporal_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#minAge"/>
+        <Class abbreviatedIRI="viso:Temporal_Data"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class abbreviatedIRI="viso:Nominal_Scale_of_Measurement"/>
+        <Class abbreviatedIRI="viso:Ordinal_Scale_of_Measurement"/>
+        <Class abbreviatedIRI="viso:Quantitative_Scale_of_Measurement"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="viso:Physical_Data"/>
+        <Class IRI="#Double"/>
+        <Class IRI="#Integer"/>
+        <Class IRI="#String"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="resource:SIO_000318"/>
+        <Class abbreviatedIRI="resource:SIO_000319"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class abbreviatedIRI="resource:SIO_001013"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Age"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#maxAge"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_AgeMax"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#minAge"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_AgeMin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Double"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Double"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Integer"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Integer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="resource:SIO_000319"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Lat"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="resource:SIO_000318"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Lon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="resource:SIO_000414"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Region"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#String"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_String"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="resource:SIO_000414"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Subregion1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="resource:SIO_000414"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Subregion2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/2006/time#generalYear"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Year"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VisTool"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputBinary"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputVariable"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputYear"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="viso:Nominal_Scale_of_Measurement"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Nominal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="viso:Ordinal_Scale_of_Measurement"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Ordinal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="viso:Quantitative_Scale_of_Measurement"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Quantitative"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VisTool"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAge"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAgeMax"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAgeMin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputCategory"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputLat"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputLon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputRegion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputYear"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputBinary"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Double"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputVariable"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_String"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputYear"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Integer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAge"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Integer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAgeMax"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Integer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAgeMin"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Integer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputLat"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Double"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputLon"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Lon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputRegion"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_String"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion1"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_String"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion2"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_String"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputYear"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Integer"/>
+    </ObjectPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasParentRegion"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasSubregion"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasDatatype"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasScaletype"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+    </FunctionalObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#canHaveInputType"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasDatatype"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasInputType"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasParentRegion"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasScaletype"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasSubregion"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#needsInputType"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+    </AsymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasParentRegion"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasSubregion"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#canHaveInputType"/>
+        <Class IRI="#VisTool"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasDatatype"/>
+        <Class IRI="#InputType"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasInputType"/>
+        <Class abbreviatedIRI="viso:Tabular_Data_Structure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasParentRegion"/>
+        <Class abbreviatedIRI="resource:SIO_000414"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasScaletype"/>
+        <Class IRI="#InputType"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasSubregion"/>
+        <Class abbreviatedIRI="resource:SIO_000414"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#needsInputType"/>
+        <Class IRI="#VisTool"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <Class IRI="#InputType"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#canHaveInputType"/>
+        <Class IRI="#InputType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasDatatype"/>
+        <Class abbreviatedIRI="viso:Data"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasInputType"/>
+        <Class IRI="#InputType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasParentRegion"/>
+        <Class abbreviatedIRI="resource:SIO_000414"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasScaletype"/>
+        <Class abbreviatedIRI="viso:Scale_of_Measurement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasSubregion"/>
+        <Class abbreviatedIRI="resource:SIO_000414"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#needsInputType"/>
+        <Class IRI="#InputType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <Class IRI="#Primitive_Data_Types"/>
+    </ObjectPropertyRange>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#canHaveInputType"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#needsInputType"/>
+    </DisjointObjectProperties>
+    <FunctionalDataProperty>
+        <DataProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasName"/>
+    </FunctionalDataProperty>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasMaxCardinality"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasMinCardinality"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasName"/>
+        <Datatype abbreviatedIRI="xsd:Name"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>viso:Data</AbbreviatedIRI>
+        <Literal>Datatypes for describing visualization tools</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>viso:Geographical_Data</AbbreviatedIRI>
+        <Literal>Geographical Data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>viso:Nominal_Scale_of_Measurement</AbbreviatedIRI>
+        <Literal>A qualitative scale type with non-metric features. Differentiation is possible, but no natural order is given.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>viso:Nominal_Scale_of_Measurement</AbbreviatedIRI>
+        <Literal>Nominal Scale of Measurement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <AbbreviatedIRI>viso:Nominal_Scale_of_Measurement</AbbreviatedIRI>
+        <Literal>stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>viso:Ordinal_Scale_of_Measurement</AbbreviatedIRI>
+        <Literal>A qualitative scale type with non-metric features. Differentiation is possible, and an order is given, but it does not allow for relative degree of difference calculations.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>viso:Ordinal_Scale_of_Measurement</AbbreviatedIRI>
+        <Literal>Ordinal Scale of Measurement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <AbbreviatedIRI>viso:Ordinal_Scale_of_Measurement</AbbreviatedIRI>
+        <Literal>stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>viso:Physical_Data</AbbreviatedIRI>
+        <Literal>Datatypes for physical data types, for example space and time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>viso:Physical_Data</AbbreviatedIRI>
+        <Literal>Physical Data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <AbbreviatedIRI>viso:Physical_Data</AbbreviatedIRI>
+        <Literal>stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>viso:Quantitative_Scale_of_Measurement</AbbreviatedIRI>
+        <Literal>The quantitative scale types include the interval scale and the ratio scale. They have a natural order and distances and mean values can be calculated. The ratio scale also has a zero point.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>viso:Quantitative_Scale_of_Measurement</AbbreviatedIRI>
+        <Literal>Quantitative Scale of Measurement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <AbbreviatedIRI>viso:Quantitative_Scale_of_Measurement</AbbreviatedIRI>
+        <Literal>stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>viso:Scale_of_Measurement</AbbreviatedIRI>
+        <Literal>Describes the kind of values in measured data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>viso:Scale_of_Measurement</AbbreviatedIRI>
+        <Literal>Scale of Measurement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>viso:Spatial_Data</AbbreviatedIRI>
+        <Literal>Datatypes describing location, size and shape.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>viso:Spatial_Data</AbbreviatedIRI>
+        <Literal>Spatial Data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <AbbreviatedIRI>viso:Spatial_Data</AbbreviatedIRI>
+        <Literal>stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>viso:Temporal_Data</AbbreviatedIRI>
+        <Literal>Datatypes describing time related attributes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>viso:Temporal_Data</AbbreviatedIRI>
+        <Literal>Temporal Data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <AbbreviatedIRI>viso:Temporal_Data</AbbreviatedIRI>
+        <Literal>stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
+        <AbbreviatedIRI>resource:SIO_000013</AbbreviatedIRI>
+        <Literal>SIO_000013</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>resource:SIO_000013</AbbreviatedIRI>
+        <Literal xml:lang="en">A geographic position is the coordinate of an entity against some geographic coordinate system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>resource:SIO_000013</AbbreviatedIRI>
+        <IRI>http://semanticscience.org/ontology/sio.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>resource:SIO_000013</AbbreviatedIRI>
+        <Literal>Position</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>resource:SIO_000013</AbbreviatedIRI>
+        <Literal xml:lang="en">geographic position</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
+        <AbbreviatedIRI>resource:SIO_000318</AbbreviatedIRI>
+        <Literal>SIO_000318</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>resource:SIO_000318</AbbreviatedIRI>
+        <Literal xml:lang="en">Longitude is a geographic position that refers to  the angle east or west of a reference meridian between the two geographical poles to another meridian that passes through an arbitrary point.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>resource:SIO_000318</AbbreviatedIRI>
+        <IRI>http://semanticscience.org/ontology/sio.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>resource:SIO_000318</AbbreviatedIRI>
+        <Literal>Longitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>resource:SIO_000318</AbbreviatedIRI>
+        <Literal xml:lang="en">longitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
+        <AbbreviatedIRI>resource:SIO_000319</AbbreviatedIRI>
+        <Literal>SIO_000319</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>resource:SIO_000319</AbbreviatedIRI>
+        <Literal xml:lang="en">Latitude is a geographic coordinate which refers to the angle from a point on the Earth&apos;s surface to the equatorial plane</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>resource:SIO_000319</AbbreviatedIRI>
+        <IRI>http://semanticscience.org/ontology/sio.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>resource:SIO_000319</AbbreviatedIRI>
+        <Literal>Latitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>resource:SIO_000319</AbbreviatedIRI>
+        <Literal xml:lang="en">latitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
+        <AbbreviatedIRI>resource:SIO_000414</AbbreviatedIRI>
+        <Literal>SIO_000414</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>resource:SIO_000414</AbbreviatedIRI>
+        <Literal xml:lang="en">A geographic region is a spatial region whose boundaries are typically defined against some material frame of reference (like the earth).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="resource:example"/>
+        <AbbreviatedIRI>resource:SIO_000414</AbbreviatedIRI>
+        <Literal xml:lang="en">The spatial region occupied by the province of ontario; the spatial region occupied by a lake.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>resource:SIO_000414</AbbreviatedIRI>
+        <IRI>http://semanticscience.org/ontology/sio.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>resource:SIO_000414</AbbreviatedIRI>
+        <Literal>Region</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>resource:SIO_000414</AbbreviatedIRI>
+        <Literal xml:lang="en">geographic region</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
+        <AbbreviatedIRI>resource:SIO_001013</AbbreviatedIRI>
+        <Literal>SIO_001013</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>resource:SIO_001013</AbbreviatedIRI>
+        <Literal xml:lang="en">age is the length of time that a person has lived or a thing has existed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>resource:SIO_001013</AbbreviatedIRI>
+        <IRI>http://semanticscience.org/ontology/sio.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>resource:SIO_001013</AbbreviatedIRI>
+        <Literal>Age</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>resource:SIO_001013</AbbreviatedIRI>
+        <Literal xml:lang="en">age</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasSubregion"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Region</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Subregion1</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasSubregion"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Region</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Subregion2</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasParentRegion"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Subregion1</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Region</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasSubregion"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Subregion1</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Subregion2</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasParentRegion"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Subregion2</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Subregion1</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="canHaveInputType"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputBinary</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasName"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx</IRI>
+        <Literal>MicrofaciesExplorer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="needsInputType"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputVariable</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="needsInputType"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputYear</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasMinCardinality"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputBinary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasName"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputBinary</IRI>
+        <Literal>toBinary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasScaletype"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputBinary</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Ordinal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasMinCardinality"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputVariable</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasName"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputVariable</IRI>
+        <Literal>variable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasScaletype"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputVariable</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Nominal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasDatatype"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputYear</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Year</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasMaxCardinality"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputYear</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasMinCardinality"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputYear</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasName"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputYear</IRI>
+        <Literal>year</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasScaletype"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputYear</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Quantitative</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasName"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu</IRI>
+        <Literal>Slivisu</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="needsInputType"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAge</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="needsInputType"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAgeMax</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="needsInputType"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAgeMin</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="needsInputType"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputCategory</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="needsInputType"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputLat</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="needsInputType"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputLon</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="needsInputType"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputRegion</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="needsInputType"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion1</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="needsInputType"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion2</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="needsInputType"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputYear</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasDatatype"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAge</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Age</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasMaxCardinality"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAge</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasMinCardinality"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAge</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasName"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAge</IRI>
+        <Literal>age</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasScaletype"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAge</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Quantitative</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasDatatype"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAgeMax</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_AgeMax</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasMaxCardinality"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAgeMax</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasMinCardinality"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAgeMax</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasName"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAgeMax</IRI>
+        <Literal>ageMax</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasScaletype"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAgeMax</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Quantitative</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasDatatype"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAgeMin</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_AgeMin</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasMaxCardinality"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAgeMin</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasMinCardinality"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAgeMin</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasName"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAgeMin</IRI>
+        <Literal>ageMin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasScaletype"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAgeMin</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Quantitative</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasDatatype"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputCategory</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_String</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasMaxCardinality"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputCategory</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasMinCardinality"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputCategory</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasName"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputCategory</IRI>
+        <Literal>category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasScaletype"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputCategory</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Nominal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasDatatype"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputLat</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Lat</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasMaxCardinality"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputLat</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasMinCardinality"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputLat</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasName"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputLat</IRI>
+        <Literal>latitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasScaletype"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputLat</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Ordinal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasDatatype"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputLon</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Lon</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasMaxCardinality"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputLon</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasMinCardinality"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputLon</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasName"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputLon</IRI>
+        <Literal>Longitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasScaletype"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputLon</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Ordinal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasDatatype"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputRegion</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Region</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasMaxCardinality"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputRegion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasMinCardinality"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputRegion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasName"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputRegion</IRI>
+        <Literal>region</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasScaletype"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputRegion</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Nominal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasSubregion"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputRegion</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion1</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasDatatype"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion1</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Subregion1</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasMaxCardinality"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion1</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasMinCardinality"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion1</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasName"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion1</IRI>
+        <Literal>subregion1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasParentRegion"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion1</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputRegion</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasScaletype"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion1</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Nominal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasDatatype"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion2</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Subregion2</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasMaxCardinality"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion2</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasMinCardinality"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion2</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasName"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion2</IRI>
+        <Literal>Subregion2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasParentRegion"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion2</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion1</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasScaletype"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion2</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Nominal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasDatatype"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputYear</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Year</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasMaxCardinality"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputYear</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasMinCardinality"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputYear</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasName"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputYear</IRI>
+        <Literal>year</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasScaletype"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputYear</IRI>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Quantitative</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#canHaveInputType</IRI>
+        <Literal>an input type which is optional for a vis tool</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasDatatype</IRI>
+        <Literal>refers to the semantic data type for an input type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasInputType</IRI>
+        <Literal>the input type from a dataset (usually a table column)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasMaxCardinality</IRI>
+        <Literal>the maximum cardinality allowed for an input type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasMinCardinality</IRI>
+        <Literal>the minimum cardinality needed for an input type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasName</IRI>
+        <Literal>the name of an input type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasParentRegion</IRI>
+        <Literal>defines the parent region of a subregion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasScaletype</IRI>
+        <Literal>the scale type for an input type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasSubregion</IRI>
+        <Literal>defines the subregion of a region</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#needsInputType</IRI>
+        <Literal>an input type needed by the vis tool</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/time#generalYear</IRI>
+        <Literal xml:lang="en">Year number - formulated as a text string with a pattern constraint to reproduce the same lexical form as gYear, but not restricted to values from the Gregorian calendar. 
+Note that the value-space is not defined, so a generic OWL2 processor cannot compute ordering relationships of values of this type.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/time#generalYear</IRI>
+        <Literal xml:lang="en">Generalized year</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/time#generalYear</IRI>
+        <Literal>Year</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>http://www.w3.org/2006/time#generalYear</IRI>
+        <Literal xml:lang="en">Year number - generalization of xsd:gYear, formulated as a text string with a pattern constraint to reproduce the same lexical form as gYear. Note that the value-space is not defined, so a generic OWL2 processor cannot compute ordering relationships of values of this type.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#Double</IRI>
+        <Literal>A floating-point number.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#InputType</IRI>
+        <Literal>The input type for a visualization tool. For tools which need tabledata input, one input type usually refers to one table column.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#InputType</IRI>
+        <Literal>Input Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#Integer</IRI>
+        <Literal>A whole number.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#Primitive_Data_Types</IRI>
+        <Literal>Basic Datatypes like Integer, Double, String...</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Primitive_Data_Types</IRI>
+        <Literal>Primitive Data Types</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#String</IRI>
+        <Literal>A sequence of characters.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#VisTool</IRI>
+        <Literal>Visualization Tool</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#VisTool</IRI>
+        <Literal>A Software for visualizing data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#hasPrimitiveType</IRI>
+        <Literal>the basic datatype of an input type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#maxAge</IRI>
+        <Literal>If an Entitiy has an uncertain age value or an age span, this defines the maximum value.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#maxAge</IRI>
+        <Literal>Maximum Age</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#minAge</IRI>
+        <Literal>If an Entitiy has an uncertain age value or an age span, this defines the maximum value.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#minAge</IRI>
+        <Literal>Minimum Age</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
