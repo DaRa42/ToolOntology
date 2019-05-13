@@ -5,6 +5,7 @@
      xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sio="http://semanticscience.org/ontology/sio/v1.43/sio-release.owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:cito="http://purl.org/spar/cito/"
@@ -15,7 +16,7 @@
      xmlns:viso="http://purl.org/viso/data/"
      xmlns:void="http://rdfs.org/ns/void#"
      xmlns:terms="http://purl.org/dc/terms/"
-	 xmlns:sio="http://semanticscience.org/ontology/sio/v1.43/sio-release.owl#"
+     xmlns:master="https://github.com/DaRa42/ToolOntology/blob/master/"
      xmlns:schema="http://schema.org/"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:resource="http://semanticscience.org/resource/"
@@ -89,6 +90,60 @@
     
 
 
+    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owlcanHaveInputType -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owlcanHaveInputType"/>
+    
+
+
+    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owlhasDatatype -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owlhasDatatype"/>
+    
+
+
+    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owlhasMaxCardinality -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owlhasMaxCardinality"/>
+    
+
+
+    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owlhasMinCardinality -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owlhasMinCardinality"/>
+    
+
+
+    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owlhasName -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owlhasName"/>
+    
+
+
+    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owlhasParentRegion -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owlhasParentRegion"/>
+    
+
+
+    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owlhasScaletype -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owlhasScaletype"/>
+    
+
+
+    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owlhasSubregion -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owlhasSubregion"/>
+    
+
+
+    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owlneedsInputType -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owlneedsInputType"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -139,11 +194,22 @@
 
     <owl:ObjectProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasParentRegion">
         <owl:inverseOf rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasSubregion"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000414"/>
         <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000414"/>
         <terms:description>defines the parent region of a subregion</terms:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasPrimitiveType -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasPrimitiveType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
+        <rdfs:range rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Primitive_Data_Types"/>
+        <terms:description>the basic datatype of an input type</terms:description>
     </owl:ObjectProperty>
     
 
@@ -183,18 +249,6 @@
     
 
 
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasPrimitiveType -->
-
-    <owl:ObjectProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasPrimitiveType">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdfs:domain rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <rdfs:range rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Primitive_Data_Types"/>
-        <terms:description>the basic datatype of an input type</terms:description>
-    </owl:ObjectProperty>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -203,35 +257,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasMaxCardinality -->
-
-    <owl:DatatypeProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasMaxCardinality">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-        <rdfs:comment>the maximum cardinality allowed for an input type</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasMinCardinality -->
-
-    <owl:DatatypeProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasMinCardinality">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-        <rdfs:comment>the minimum cardinality needed for an input type</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasName -->
-
-    <owl:DatatypeProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasName">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Name"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>the name of an input type</rdfs:comment>
-    </owl:DatatypeProperty>
     
 
 
@@ -274,6 +299,35 @@
     <!-- http://www.w3.org/2006/time#years -->
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#years"/>
+    
+
+
+    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasMaxCardinality -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasMaxCardinality">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>the maximum cardinality allowed for an input type</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasMinCardinality -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasMinCardinality">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>the minimum cardinality needed for an input type</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasName -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Name"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>the name of an input type</rdfs:comment>
+    </owl:DatatypeProperty>
     
 
 
@@ -474,16 +528,16 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
     <owl:Class rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasScaletype"/>
+                <owl:onProperty rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasPrimitiveType"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/viso/data/Scale_of_Measurement"/>
+                <owl:onClass rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Primitive_Data_Types"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasPrimitiveType"/>
+                <owl:onProperty rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasScaletype"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Primitive_Data_Types"/>
+                <owl:onClass rdf:resource="http://purl.org/viso/data/Scale_of_Measurement"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -633,8 +687,8 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Region">
         <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000414"/>
-        <hasSubregion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion1"/>
-        <hasSubregion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion2"/>
+        <master:ToolOntology.owlhasSubregion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion1"/>
+        <master:ToolOntology.owlhasSubregion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion2"/>
     </owl:NamedIndividual>
     
 
@@ -651,8 +705,8 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion1">
         <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000414"/>
-        <hasParentRegion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Region"/>
-        <hasSubregion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion2"/>
+        <master:ToolOntology.owlhasParentRegion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Region"/>
+        <master:ToolOntology.owlhasSubregion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion2"/>
     </owl:NamedIndividual>
     
 
@@ -661,7 +715,7 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion2">
         <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000414"/>
-        <hasParentRegion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion1"/>
+        <master:ToolOntology.owlhasParentRegion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion1"/>
     </owl:NamedIndividual>
     
 
@@ -678,10 +732,10 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#MicEx">
         <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#VisTool"/>
-        <canHaveInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#MicEx_InputBinary"/>
-        <needsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#MicEx_InputVariable"/>
-        <needsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#MicEx_InputYear"/>
-        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MicrofaciesExplorer</hasName>
+        <master:ToolOntology.owlcanHaveInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#MicEx_InputBinary"/>
+        <master:ToolOntology.owlhasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MicrofaciesExplorer</master:ToolOntology.owlhasName>
+        <master:ToolOntology.owlneedsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#MicEx_InputVariable"/>
+        <master:ToolOntology.owlneedsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#MicEx_InputYear"/>
     </owl:NamedIndividual>
     
 
@@ -690,10 +744,10 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#MicEx_InputBinary">
         <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <hasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Ordinal"/>
         <ToolOntology:hasPrimitiveType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Double"/>
-        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasMinCardinality>
-        <hasName>toBinary</hasName>
+        <master:ToolOntology.owlhasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</master:ToolOntology.owlhasMinCardinality>
+        <master:ToolOntology.owlhasName>toBinary</master:ToolOntology.owlhasName>
+        <master:ToolOntology.owlhasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Ordinal"/>
     </owl:NamedIndividual>
     
 
@@ -702,10 +756,10 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#MicEx_InputVariable">
         <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <hasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Nominal"/>
         <ToolOntology:hasPrimitiveType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_String"/>
-        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMinCardinality>
-        <hasName>variable</hasName>
+        <master:ToolOntology.owlhasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master:ToolOntology.owlhasMinCardinality>
+        <master:ToolOntology.owlhasName>variable</master:ToolOntology.owlhasName>
+        <master:ToolOntology.owlhasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Nominal"/>
     </owl:NamedIndividual>
     
 
@@ -714,12 +768,12 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#MicEx_InputYear">
         <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <hasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Year"/>
-        <hasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Quantitative"/>
         <ToolOntology:hasPrimitiveType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Integer"/>
-        <hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMaxCardinality>
-        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMinCardinality>
-        <hasName>year</hasName>
+        <master:ToolOntology.owlhasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Year"/>
+        <master:ToolOntology.owlhasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master:ToolOntology.owlhasMaxCardinality>
+        <master:ToolOntology.owlhasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master:ToolOntology.owlhasMinCardinality>
+        <master:ToolOntology.owlhasName>year</master:ToolOntology.owlhasName>
+        <master:ToolOntology.owlhasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Quantitative"/>
     </owl:NamedIndividual>
     
 
@@ -752,17 +806,17 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu">
         <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#VisTool"/>
-        <needsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputAge"/>
-        <needsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputAgeMax"/>
-        <needsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputAgeMin"/>
-        <needsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputCategory"/>
-        <needsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputLat"/>
-        <needsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputLon"/>
-        <needsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputRegion"/>
-        <needsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputSubregion1"/>
-        <needsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputSubregion2"/>
-        <needsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputYear"/>
-        <hasName>Slivisu</hasName>
+        <master:ToolOntology.owlhasName>Slivisu</master:ToolOntology.owlhasName>
+        <master:ToolOntology.owlneedsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputAge"/>
+        <master:ToolOntology.owlneedsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputAgeMax"/>
+        <master:ToolOntology.owlneedsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputAgeMin"/>
+        <master:ToolOntology.owlneedsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputCategory"/>
+        <master:ToolOntology.owlneedsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputLat"/>
+        <master:ToolOntology.owlneedsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputLon"/>
+        <master:ToolOntology.owlneedsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputRegion"/>
+        <master:ToolOntology.owlneedsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputSubregion1"/>
+        <master:ToolOntology.owlneedsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputSubregion2"/>
+        <master:ToolOntology.owlneedsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputYear"/>
     </owl:NamedIndividual>
     
 
@@ -771,12 +825,12 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputAge">
         <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <hasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Age"/>
-        <hasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Quantitative"/>
         <ToolOntology:hasPrimitiveType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Integer"/>
-        <hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMaxCardinality>
-        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMinCardinality>
-        <hasName>age</hasName>
+        <master:ToolOntology.owlhasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Age"/>
+        <master:ToolOntology.owlhasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master:ToolOntology.owlhasMaxCardinality>
+        <master:ToolOntology.owlhasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master:ToolOntology.owlhasMinCardinality>
+        <master:ToolOntology.owlhasName>age</master:ToolOntology.owlhasName>
+        <master:ToolOntology.owlhasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Quantitative"/>
     </owl:NamedIndividual>
     
 
@@ -785,12 +839,12 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputAgeMax">
         <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <hasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_AgeMax"/>
-        <hasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Quantitative"/>
         <ToolOntology:hasPrimitiveType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Integer"/>
-        <hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMaxCardinality>
-        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMinCardinality>
-        <hasName>ageMax</hasName>
+        <master:ToolOntology.owlhasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_AgeMax"/>
+        <master:ToolOntology.owlhasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master:ToolOntology.owlhasMaxCardinality>
+        <master:ToolOntology.owlhasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master:ToolOntology.owlhasMinCardinality>
+        <master:ToolOntology.owlhasName>ageMax</master:ToolOntology.owlhasName>
+        <master:ToolOntology.owlhasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Quantitative"/>
     </owl:NamedIndividual>
     
 
@@ -799,12 +853,12 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputAgeMin">
         <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <hasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_AgeMin"/>
-        <hasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Quantitative"/>
         <ToolOntology:hasPrimitiveType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Integer"/>
-        <hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMaxCardinality>
-        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMinCardinality>
-        <hasName>ageMin</hasName>
+        <master:ToolOntology.owlhasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_AgeMin"/>
+        <master:ToolOntology.owlhasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master:ToolOntology.owlhasMaxCardinality>
+        <master:ToolOntology.owlhasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master:ToolOntology.owlhasMinCardinality>
+        <master:ToolOntology.owlhasName>ageMin</master:ToolOntology.owlhasName>
+        <master:ToolOntology.owlhasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Quantitative"/>
     </owl:NamedIndividual>
     
 
@@ -813,11 +867,11 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputCategory">
         <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <hasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_String"/>
-        <hasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Nominal"/>
-        <hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMaxCardinality>
-        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMinCardinality>
-        <hasName>category</hasName>
+        <master:ToolOntology.owlhasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_String"/>
+        <master:ToolOntology.owlhasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master:ToolOntology.owlhasMaxCardinality>
+        <master:ToolOntology.owlhasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master:ToolOntology.owlhasMinCardinality>
+        <master:ToolOntology.owlhasName>category</master:ToolOntology.owlhasName>
+        <master:ToolOntology.owlhasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Nominal"/>
     </owl:NamedIndividual>
     
 
@@ -826,12 +880,12 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputLat">
         <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <hasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Lat"/>
-        <hasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Ordinal"/>
         <ToolOntology:hasPrimitiveType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Double"/>
-        <hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMaxCardinality>
-        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMinCardinality>
-        <hasName>latitude</hasName>
+        <master:ToolOntology.owlhasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Lat"/>
+        <master:ToolOntology.owlhasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master:ToolOntology.owlhasMaxCardinality>
+        <master:ToolOntology.owlhasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master:ToolOntology.owlhasMinCardinality>
+        <master:ToolOntology.owlhasName>latitude</master:ToolOntology.owlhasName>
+        <master:ToolOntology.owlhasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Ordinal"/>
     </owl:NamedIndividual>
     
 
@@ -840,12 +894,12 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputLon">
         <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <hasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Lon"/>
-        <hasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Ordinal"/>
         <ToolOntology:hasPrimitiveType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Lon"/>
-        <hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMaxCardinality>
-        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMinCardinality>
-        <hasName>Longitude</hasName>
+        <master:ToolOntology.owlhasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Lon"/>
+        <master:ToolOntology.owlhasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master:ToolOntology.owlhasMaxCardinality>
+        <master:ToolOntology.owlhasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master:ToolOntology.owlhasMinCardinality>
+        <master:ToolOntology.owlhasName>Longitude</master:ToolOntology.owlhasName>
+        <master:ToolOntology.owlhasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Ordinal"/>
     </owl:NamedIndividual>
     
 
@@ -854,13 +908,13 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputRegion">
         <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <hasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Region"/>
-        <hasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Nominal"/>
-        <hasSubregion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputSubregion1"/>
         <ToolOntology:hasPrimitiveType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_String"/>
-        <hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMaxCardinality>
-        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMinCardinality>
-        <hasName>region</hasName>
+        <master:ToolOntology.owlhasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Region"/>
+        <master:ToolOntology.owlhasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master:ToolOntology.owlhasMaxCardinality>
+        <master:ToolOntology.owlhasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master:ToolOntology.owlhasMinCardinality>
+        <master:ToolOntology.owlhasName>region</master:ToolOntology.owlhasName>
+        <master:ToolOntology.owlhasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Nominal"/>
+        <master:ToolOntology.owlhasSubregion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputSubregion1"/>
     </owl:NamedIndividual>
     
 
@@ -869,13 +923,13 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputSubregion1">
         <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <hasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion1"/>
-        <hasParentRegion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputRegion"/>
-        <hasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Nominal"/>
         <ToolOntology:hasPrimitiveType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_String"/>
-        <hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMaxCardinality>
-        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMinCardinality>
-        <hasName>subregion1</hasName>
+        <master:ToolOntology.owlhasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion1"/>
+        <master:ToolOntology.owlhasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master:ToolOntology.owlhasMaxCardinality>
+        <master:ToolOntology.owlhasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master:ToolOntology.owlhasMinCardinality>
+        <master:ToolOntology.owlhasName>subregion1</master:ToolOntology.owlhasName>
+        <master:ToolOntology.owlhasParentRegion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputRegion"/>
+        <master:ToolOntology.owlhasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Nominal"/>
     </owl:NamedIndividual>
     
 
@@ -884,13 +938,13 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputSubregion2">
         <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <hasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion2"/>
-        <hasParentRegion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputSubregion1"/>
-        <hasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Nominal"/>
         <ToolOntology:hasPrimitiveType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_String"/>
-        <hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMaxCardinality>
-        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMinCardinality>
-        <hasName>Subregion2</hasName>
+        <master:ToolOntology.owlhasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion2"/>
+        <master:ToolOntology.owlhasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master:ToolOntology.owlhasMaxCardinality>
+        <master:ToolOntology.owlhasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master:ToolOntology.owlhasMinCardinality>
+        <master:ToolOntology.owlhasName>Subregion2</master:ToolOntology.owlhasName>
+        <master:ToolOntology.owlhasParentRegion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputSubregion1"/>
+        <master:ToolOntology.owlhasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Nominal"/>
     </owl:NamedIndividual>
     
 
@@ -899,12 +953,12 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputYear">
         <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <hasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Year"/>
-        <hasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Quantitative"/>
         <ToolOntology:hasPrimitiveType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Integer"/>
-        <hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMaxCardinality>
-        <hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasMinCardinality>
-        <hasName>year</hasName>
+        <master:ToolOntology.owlhasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Year"/>
+        <master:ToolOntology.owlhasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master:ToolOntology.owlhasMaxCardinality>
+        <master:ToolOntology.owlhasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master:ToolOntology.owlhasMinCardinality>
+        <master:ToolOntology.owlhasName>year</master:ToolOntology.owlhasName>
+        <master:ToolOntology.owlhasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Quantitative"/>
     </owl:NamedIndividual>
     
 
