@@ -22,7 +22,7 @@
      xmlns:ToolOntology="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#">
     <owl:Ontology rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl">
         <owl:imports rdf:resource="http://purl.org/viso/data/"/>
-        <owl:imports rdf:resource="http://semanticscience.org/ontology/sio/v1.43/sio-release.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/micheldumontier/semanticscience/master/ontology/sio/release/sio-release.owl"/>
         <terms:description>This ToolOntology contains descriptions about certain visualization software tools and their needed Data Input like scaletypes, satatypes and semantic requirements.</terms:description>
         <rdfs:comment>Contains classes from http://purl.org/viso/data/</rdfs:comment>
         <rdfs:comment>Contains classes from http://semanticscience.org/ontology/sio.owl</rdfs:comment>
