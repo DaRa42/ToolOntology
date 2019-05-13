@@ -229,7 +229,6 @@
     <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasSubregion -->
 
     <owl:ObjectProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasSubregion">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000414"/>
         <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000414"/>
