@@ -1,0 +1,665 @@
+@prefix : <http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ns: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sio: <http://semanticscience.org/ontology/sio/v1.43/sio-release.owl#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix viso: <http://purl.org/viso/data/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
+@prefix protege: <http://protege.stanford.edu/plugins/owl/protege#> .
+@prefix resource: <http://semanticscience.org/resource/> .
+@prefix ToolOntology: <https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#> .
+@base <https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl> .
+
+<https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl> rdf:type owl:Ontology ;
+                                                                       owl:imports viso: ,
+                                                                                   <http://semanticscience.org/ontology/sio/v1.43/sio-release.owl> ;
+                                                                       terms:description "This ToolOntology contains descriptions about certain visualization software tools and their needed Data Input like scaletypes, satatypes and semantic requirements." ;
+                                                                       rdfs:comment "Contains classes from http://purl.org/viso/data/" ,
+                                                                                    "Contains classes from http://semanticscience.org/ontology/sio.owl" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/identifier
+dc:identifier rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+terms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://semanticscience.org/resource/example
+resource:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+ns:term_status rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#canHaveInputType
+:canHaveInputType rdf:type owl:ObjectProperty ,
+                           owl:AsymmetricProperty ;
+                  rdfs:domain ToolOntology:VisTool ;
+                  rdfs:range ToolOntology:InputType ;
+                  owl:propertyDisjointWith :needsInputType ;
+                  terms:description "an input type which is optional for a vis tool" .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasDatatype
+:hasDatatype rdf:type owl:ObjectProperty ,
+                      owl:FunctionalProperty ,
+                      owl:AsymmetricProperty ;
+             rdfs:domain ToolOntology:InputType ;
+             rdfs:range viso:Data ;
+             terms:description "refers to the semantic data type for an input type" .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasInputType
+:hasInputType rdf:type owl:ObjectProperty ,
+                       owl:AsymmetricProperty ;
+              rdfs:domain viso:Tabular_Data_Structure ;
+              rdfs:range ToolOntology:InputType ;
+              terms:description "the input type from a dataset (usually a table column)" .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasParentRegion
+:hasParentRegion rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :hasSubregion ;
+                 rdf:type owl:AsymmetricProperty ,
+                          owl:TransitiveProperty ;
+                 rdfs:domain resource:SIO_000414 ;
+                 rdfs:range resource:SIO_000414 ;
+                 terms:description "defines the parent region of a subregion" .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasScaletype
+:hasScaletype rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ,
+                       owl:AsymmetricProperty ;
+              rdfs:domain ToolOntology:InputType ;
+              rdfs:range viso:Scale_of_Measurement ;
+              terms:description "the scale type for an input type" .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasSubregion
+:hasSubregion rdf:type owl:ObjectProperty ,
+                       owl:AsymmetricProperty ,
+                       owl:TransitiveProperty ;
+              rdfs:domain resource:SIO_000414 ;
+              rdfs:range resource:SIO_000414 ;
+              terms:description "defines the subregion of a region" .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#needsInputType
+:needsInputType rdf:type owl:ObjectProperty ,
+                         owl:AsymmetricProperty ;
+                rdfs:domain ToolOntology:VisTool ;
+                rdfs:range ToolOntology:InputType ;
+                terms:description "an input type needed by the vis tool" .
+
+
+###  https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasPrimitiveType
+ToolOntology:hasPrimitiveType rdf:type owl:ObjectProperty ,
+                                       owl:FunctionalProperty ,
+                                       owl:AsymmetricProperty ;
+                              rdfs:domain ToolOntology:InputType ;
+                              rdfs:range ToolOntology:Primitive_Data_Types ;
+                              terms:description "the basic datatype of an input type" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasMaxCardinality
+:hasMaxCardinality rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:int ;
+                   rdfs:comment "the maximum cardinality allowed for an input type" .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasMinCardinality
+:hasMinCardinality rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:int ;
+                   rdfs:comment "the minimum cardinality needed for an input type" .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#hasName
+:hasName rdf:type owl:DatatypeProperty ,
+                  owl:FunctionalProperty ;
+         rdfs:range xsd:Name ,
+                    xsd:string ;
+         rdfs:comment "the name of an input type" .
+
+
+###  http://www.w3.org/2006/time#days
+<http://www.w3.org/2006/time#days> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2006/time#hours
+<http://www.w3.org/2006/time#hours> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2006/time#minutes
+<http://www.w3.org/2006/time#minutes> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2006/time#months
+<http://www.w3.org/2006/time#months> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2006/time#seconds
+<http://www.w3.org/2006/time#seconds> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2006/time#weeks
+<http://www.w3.org/2006/time#weeks> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2006/time#years
+<http://www.w3.org/2006/time#years> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/viso/data/Data
+viso:Data rdf:type owl:Class ;
+          terms:description "Datatypes for describing visualization tools" .
+
+
+###  http://purl.org/viso/data/Geographical_Data
+viso:Geographical_Data rdf:type owl:Class ;
+                       rdfs:subClassOf viso:Spatial_Data ;
+                       rdfs:label "Geographical Data" .
+
+
+###  http://purl.org/viso/data/Nominal_Scale_of_Measurement
+viso:Nominal_Scale_of_Measurement rdf:type owl:Class ;
+                                  rdfs:subClassOf viso:Scale_of_Measurement ;
+                                  terms:description "A qualitative scale type with non-metric features. Differentiation is possible, but no natural order is given." ;
+                                  rdfs:label "Nominal Scale of Measurement" ;
+                                  ns:term_status "stable"^^xsd:string .
+
+
+###  http://purl.org/viso/data/Ordinal_Scale_of_Measurement
+viso:Ordinal_Scale_of_Measurement rdf:type owl:Class ;
+                                  rdfs:subClassOf viso:Scale_of_Measurement ;
+                                  terms:description "A qualitative scale type with non-metric features. Differentiation is possible, and an order is given, but it does not allow for relative degree of difference calculations." ;
+                                  rdfs:label "Ordinal Scale of Measurement" ;
+                                  ns:term_status "stable"^^xsd:string .
+
+
+###  http://purl.org/viso/data/Physical_Data
+viso:Physical_Data rdf:type owl:Class ;
+                   rdfs:subClassOf viso:Data ;
+                   terms:description "Datatypes for physical data types, for example space and time." ;
+                   rdfs:label "Physical Data" ;
+                   ns:term_status "stable"^^xsd:string .
+
+
+###  http://purl.org/viso/data/Quantitative_Scale_of_Measurement
+viso:Quantitative_Scale_of_Measurement rdf:type owl:Class ;
+                                       rdfs:subClassOf viso:Scale_of_Measurement ;
+                                       terms:description "The quantitative scale types include the interval scale and the ratio scale. They have a natural order and distances and mean values can be calculated. The ratio scale also has a zero point." ;
+                                       rdfs:label "Quantitative Scale of Measurement" ;
+                                       ns:term_status "stable"^^xsd:string .
+
+
+###  http://purl.org/viso/data/Scale_of_Measurement
+viso:Scale_of_Measurement rdf:type owl:Class ;
+                          terms:description "Describes the kind of values in measured data." ;
+                          rdfs:label "Scale of Measurement" .
+
+
+###  http://purl.org/viso/data/Spatial_Data
+viso:Spatial_Data rdf:type owl:Class ;
+                  rdfs:subClassOf viso:Physical_Data ;
+                  terms:description "Datatypes describing location, size and shape." ;
+                  rdfs:label "Spatial Data" ;
+                  ns:term_status "stable"^^xsd:string .
+
+
+###  http://purl.org/viso/data/Temporal_Data
+viso:Temporal_Data rdf:type owl:Class ;
+                   rdfs:subClassOf viso:Physical_Data ;
+                   terms:description "Datatypes describing time related attributes." ;
+                   rdfs:label "Temporal Data" ;
+                   ns:term_status "stable"^^xsd:string .
+
+
+###  http://semanticscience.org/resource/SIO_000013
+resource:SIO_000013 rdf:type owl:Class ;
+                    rdfs:subClassOf viso:Geographical_Data ;
+                    dc:identifier "SIO_000013" ;
+                    terms:description "A geographic position is the coordinate of an entity against some geographic coordinate system."@en ;
+                    rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+                    rdfs:label "Position" ,
+                               "geographic position"@en .
+
+
+###  http://semanticscience.org/resource/SIO_000318
+resource:SIO_000318 rdf:type owl:Class ;
+                    rdfs:subClassOf resource:SIO_000013 ;
+                    owl:disjointWith resource:SIO_000319 ;
+                    dc:identifier "SIO_000318" ;
+                    terms:description "Longitude is a geographic position that refers to  the angle east or west of a reference meridian between the two geographical poles to another meridian that passes through an arbitrary point."@en ;
+                    rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+                    rdfs:label "Longitude" ,
+                               "longitude"@en .
+
+
+###  http://semanticscience.org/resource/SIO_000319
+resource:SIO_000319 rdf:type owl:Class ;
+                    rdfs:subClassOf resource:SIO_000013 ;
+                    dc:identifier "SIO_000319" ;
+                    terms:description "Latitude is a geographic coordinate which refers to the angle from a point on the Earth's surface to the equatorial plane"@en ;
+                    rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+                    rdfs:label "Latitude" ,
+                               "latitude"@en .
+
+
+###  http://semanticscience.org/resource/SIO_000414
+resource:SIO_000414 rdf:type owl:Class ;
+                    rdfs:subClassOf viso:Geographical_Data ;
+                    dc:identifier "SIO_000414" ;
+                    terms:description "A geographic region is a spatial region whose boundaries are typically defined against some material frame of reference (like the earth)."@en ;
+                    resource:example "The spatial region occupied by the province of ontario; the spatial region occupied by a lake."@en ;
+                    rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+                    rdfs:label "Region" ,
+                               "geographic region"@en .
+
+
+###  http://semanticscience.org/resource/SIO_001013
+resource:SIO_001013 rdf:type owl:Class ;
+                    rdfs:subClassOf viso:Temporal_Data ;
+                    dc:identifier "SIO_001013" ;
+                    terms:description "age is the length of time that a person has lived or a thing has existed."@en ;
+                    rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+                    rdfs:label "Age" ,
+                               "age"@en .
+
+
+###  http://www.w3.org/2006/time#generalYear
+<http://www.w3.org/2006/time#generalYear> rdf:type owl:Class ;
+                                          rdfs:subClassOf viso:Temporal_Data ;
+                                          rdfs:comment """Year number - formulated as a text string with a pattern constraint to reproduce the same lexical form as gYear, but not restricted to values from the Gregorian calendar. 
+Note that the value-space is not defined, so a generic OWL2 processor cannot compute ordering relationships of values of this type."""@en ;
+                                          rdfs:label "Generalized year"@en ,
+                                                     "Year" ;
+                                          skos:definition "Year number - generalization of xsd:gYear, formulated as a text string with a pattern constraint to reproduce the same lexical form as gYear. Note that the value-space is not defined, so a generic OWL2 processor cannot compute ordering relationships of values of this type."@en .
+
+
+###  https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Double
+ToolOntology:Double rdf:type owl:Class ;
+                    rdfs:subClassOf ToolOntology:Primitive_Data_Types ;
+                    terms:description "A floating-point number." .
+
+
+###  https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType
+ToolOntology:InputType rdf:type owl:Class ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasScaletype ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass viso:Scale_of_Measurement
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty ToolOntology:hasPrimitiveType ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass ToolOntology:Primitive_Data_Types
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasName ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:string
+                                       ] ;
+                       terms:description "The input type for a visualization tool. For tools which need tabledata input, one input type usually refers to one table column." ;
+                       rdfs:label "Input Type" .
+
+
+###  https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Integer
+ToolOntology:Integer rdf:type owl:Class ;
+                     rdfs:subClassOf ToolOntology:Primitive_Data_Types ;
+                     terms:description "A whole number." .
+
+
+###  https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Primitive_Data_Types
+ToolOntology:Primitive_Data_Types rdf:type owl:Class ;
+                                  rdfs:subClassOf viso:Data ;
+                                  terms:description "Basic Datatypes like Integer, Double, String..." ;
+                                  rdfs:label "Primitive Data Types" .
+
+
+###  https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#String
+ToolOntology:String rdf:type owl:Class ;
+                    rdfs:subClassOf ToolOntology:Primitive_Data_Types ;
+                    terms:description "A sequence of characters." .
+
+
+###  https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#VisTool
+ToolOntology:VisTool rdf:type owl:Class ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty :needsInputType ;
+                                       owl:someValuesFrom ToolOntology:InputType
+                                     ] ;
+                     rdfs:label "Visualization Tool" ;
+                     skos:definition "A Software for visualizing data" .
+
+
+###  https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#maxAge
+ToolOntology:maxAge rdf:type owl:Class ;
+                    rdfs:subClassOf viso:Temporal_Data ;
+                    terms:description "If an Entitiy has an uncertain age value or an age span, this defines the maximum value." ;
+                    rdfs:label "Maximum Age" .
+
+
+###  https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#minAge
+ToolOntology:minAge rdf:type owl:Class ;
+                    rdfs:subClassOf viso:Temporal_Data ;
+                    terms:description "If an Entitiy has an uncertain age value or an age span, this defines the maximum value." ;
+                    rdfs:label "Minimum Age" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Age
+:Data_Age rdf:type owl:NamedIndividual ,
+                   resource:SIO_001013 .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_AgeMax
+:Data_AgeMax rdf:type owl:NamedIndividual ,
+                      ToolOntology:maxAge .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_AgeMin
+:Data_AgeMin rdf:type owl:NamedIndividual ,
+                      ToolOntology:minAge .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Double
+:Data_Double rdf:type owl:NamedIndividual ,
+                      ToolOntology:Double .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Integer
+:Data_Integer rdf:type owl:NamedIndividual ,
+                       ToolOntology:Integer .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Lat
+:Data_Lat rdf:type owl:NamedIndividual ,
+                   resource:SIO_000319 .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Lon
+:Data_Lon rdf:type owl:NamedIndividual ,
+                   resource:SIO_000318 .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Region
+:Data_Region rdf:type owl:NamedIndividual ,
+                      resource:SIO_000414 ;
+             :hasSubregion :Data_Subregion1 ,
+                           :Data_Subregion2 .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_String
+:Data_String rdf:type owl:NamedIndividual ,
+                      ToolOntology:String .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Subregion1
+:Data_Subregion1 rdf:type owl:NamedIndividual ,
+                          resource:SIO_000414 ;
+                 :hasParentRegion :Data_Region ;
+                 :hasSubregion :Data_Subregion2 .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Subregion2
+:Data_Subregion2 rdf:type owl:NamedIndividual ,
+                          resource:SIO_000414 ;
+                 :hasParentRegion :Data_Subregion1 .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Data_Year
+:Data_Year rdf:type owl:NamedIndividual ,
+                    <http://www.w3.org/2006/time#generalYear> .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx
+:MicEx rdf:type owl:NamedIndividual ,
+                ToolOntology:VisTool ;
+       :canHaveInputType :MicEx_InputBinary ;
+       :needsInputType :MicEx_InputVariable ,
+                       :MicEx_InputYear ;
+       :hasName "MicrofaciesExplorer"^^xsd:string .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputBinary
+:MicEx_InputBinary rdf:type owl:NamedIndividual ,
+                            ToolOntology:InputType ;
+                   :hasScaletype :Scaletype_Ordinal ;
+                   ToolOntology:hasPrimitiveType :Data_Double ;
+                   :hasMinCardinality 0 ;
+                   :hasName "toBinary" .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputVariable
+:MicEx_InputVariable rdf:type owl:NamedIndividual ,
+                              ToolOntology:InputType ;
+                     :hasScaletype :Scaletype_Nominal ;
+                     ToolOntology:hasPrimitiveType :Data_String ;
+                     :hasMinCardinality 1 ;
+                     :hasName "variable" .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#MicEx_InputYear
+:MicEx_InputYear rdf:type owl:NamedIndividual ,
+                          ToolOntology:InputType ;
+                 :hasDatatype :Data_Year ;
+                 :hasScaletype :Scaletype_Quantitative ;
+                 ToolOntology:hasPrimitiveType :Data_Integer ;
+                 :hasMaxCardinality 1 ;
+                 :hasMinCardinality 1 ;
+                 :hasName "year" .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Nominal
+:Scaletype_Nominal rdf:type owl:NamedIndividual ,
+                            viso:Nominal_Scale_of_Measurement .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Ordinal
+:Scaletype_Ordinal rdf:type owl:NamedIndividual ,
+                            viso:Ordinal_Scale_of_Measurement .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Scaletype_Quantitative
+:Scaletype_Quantitative rdf:type owl:NamedIndividual ,
+                                 viso:Quantitative_Scale_of_Measurement .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu
+:Slivisu rdf:type owl:NamedIndividual ,
+                  ToolOntology:VisTool ;
+         :needsInputType :Slivisu_InputAge ,
+                         :Slivisu_InputAgeMax ,
+                         :Slivisu_InputAgeMin ,
+                         :Slivisu_InputCategory ,
+                         :Slivisu_InputLat ,
+                         :Slivisu_InputLon ,
+                         :Slivisu_InputRegion ,
+                         :Slivisu_InputSubregion1 ,
+                         :Slivisu_InputSubregion2 ,
+                         :Slivisu_InputYear ;
+         :hasName "Slivisu" .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAge
+:Slivisu_InputAge rdf:type owl:NamedIndividual ,
+                           ToolOntology:InputType ;
+                  :hasDatatype :Data_Age ;
+                  :hasScaletype :Scaletype_Quantitative ;
+                  ToolOntology:hasPrimitiveType :Data_Integer ;
+                  :hasMaxCardinality 1 ;
+                  :hasMinCardinality 1 ;
+                  :hasName "age" .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAgeMax
+:Slivisu_InputAgeMax rdf:type owl:NamedIndividual ,
+                              ToolOntology:InputType ;
+                     :hasDatatype :Data_AgeMax ;
+                     :hasScaletype :Scaletype_Quantitative ;
+                     ToolOntology:hasPrimitiveType :Data_Integer ;
+                     :hasMaxCardinality 1 ;
+                     :hasMinCardinality 1 ;
+                     :hasName "ageMax" .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputAgeMin
+:Slivisu_InputAgeMin rdf:type owl:NamedIndividual ,
+                              ToolOntology:InputType ;
+                     :hasDatatype :Data_AgeMin ;
+                     :hasScaletype :Scaletype_Quantitative ;
+                     ToolOntology:hasPrimitiveType :Data_Integer ;
+                     :hasMaxCardinality 1 ;
+                     :hasMinCardinality 1 ;
+                     :hasName "ageMin" .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputCategory
+:Slivisu_InputCategory rdf:type owl:NamedIndividual ,
+                                ToolOntology:InputType ;
+                       :hasDatatype :Data_String ;
+                       :hasScaletype :Scaletype_Nominal ;
+                       :hasMaxCardinality 1 ;
+                       :hasMinCardinality 1 ;
+                       :hasName "category" .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputLat
+:Slivisu_InputLat rdf:type owl:NamedIndividual ,
+                           ToolOntology:InputType ;
+                  :hasDatatype :Data_Lat ;
+                  :hasScaletype :Scaletype_Ordinal ;
+                  ToolOntology:hasPrimitiveType :Data_Double ;
+                  :hasMaxCardinality 1 ;
+                  :hasMinCardinality 1 ;
+                  :hasName "latitude" .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputLon
+:Slivisu_InputLon rdf:type owl:NamedIndividual ,
+                           ToolOntology:InputType ;
+                  :hasDatatype :Data_Lon ;
+                  :hasScaletype :Scaletype_Ordinal ;
+                  ToolOntology:hasPrimitiveType :Data_Lon ;
+                  :hasMaxCardinality 1 ;
+                  :hasMinCardinality 1 ;
+                  :hasName "Longitude" .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputRegion
+:Slivisu_InputRegion rdf:type owl:NamedIndividual ,
+                              ToolOntology:InputType ;
+                     :hasDatatype :Data_Region ;
+                     :hasScaletype :Scaletype_Nominal ;
+                     :hasSubregion :Slivisu_InputSubregion1 ;
+                     ToolOntology:hasPrimitiveType :Data_String ;
+                     :hasMaxCardinality 1 ;
+                     :hasMinCardinality 1 ;
+                     :hasName "region" .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion1
+:Slivisu_InputSubregion1 rdf:type owl:NamedIndividual ,
+                                  ToolOntology:InputType ;
+                         :hasDatatype :Data_Subregion1 ;
+                         :hasParentRegion :Slivisu_InputRegion ;
+                         :hasScaletype :Scaletype_Nominal ;
+                         ToolOntology:hasPrimitiveType :Data_String ;
+                         :hasMaxCardinality 1 ;
+                         :hasMinCardinality 1 ;
+                         :hasName "subregion1" .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputSubregion2
+:Slivisu_InputSubregion2 rdf:type owl:NamedIndividual ,
+                                  ToolOntology:InputType ;
+                         :hasDatatype :Data_Subregion2 ;
+                         :hasParentRegion :Slivisu_InputSubregion1 ;
+                         :hasScaletype :Scaletype_Nominal ;
+                         ToolOntology:hasPrimitiveType :Data_String ;
+                         :hasMaxCardinality 1 ;
+                         :hasMinCardinality 1 ;
+                         :hasName "Subregion2" .
+
+
+###  http://www.semanticweb.org/danii/ontologies/2019/1/untitled-ontology-8#Slivisu_InputYear
+:Slivisu_InputYear rdf:type owl:NamedIndividual ,
+                            ToolOntology:InputType ;
+                   :hasDatatype :Data_Year ;
+                   :hasScaletype :Scaletype_Quantitative ;
+                   ToolOntology:hasPrimitiveType :Data_Integer ;
+                   :hasMaxCardinality 1 ;
+                   :hasMinCardinality 1 ;
+                   :hasName "year" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( viso:Nominal_Scale_of_Measurement
+                viso:Ordinal_Scale_of_Measurement
+                viso:Quantitative_Scale_of_Measurement
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( viso:Physical_Data
+                ToolOntology:Double
+                ToolOntology:Integer
+                ToolOntology:String
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
