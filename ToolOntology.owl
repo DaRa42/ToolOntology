@@ -653,6 +653,7 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Double">
         <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Double"/>
+        <ToolOntology:hasName>Double</ToolOntology:hasName>
     </owl:NamedIndividual>
     
 
@@ -661,6 +662,7 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Integer">
         <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Integer"/>
+        <ToolOntology:hasName>Integer</ToolOntology:hasName>
     </owl:NamedIndividual>
     
 
@@ -695,6 +697,7 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_String">
         <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#String"/>
+        <ToolOntology:hasName>String</ToolOntology:hasName>
     </owl:NamedIndividual>
     
 
