@@ -25,7 +25,7 @@
         <owl:imports rdf:resource="https://raw.githubusercontent.com/micheldumontier/semanticscience/master/ontology/sio/release/sio-release.owl"/>
         <terms:description>This ToolOntology contains descriptions about certain visualization software tools and their needed Data Input like scaletypes, satatypes and semantic requirements.</terms:description>
         <rdfs:comment>Contains classes from http://purl.org/viso/data/</rdfs:comment>
-        <rdfs:comment>Contains classes from http://semanticscience.org/ontology/sio.owl</rdfs:comment>
+        <rdfs:comment>Contains classes from https://raw.githubusercontent.com/micheldumontier/semanticscience/master/ontology/sio/release/sio-release.owl</rdfs:comment>
     </owl:Ontology>
     
 
