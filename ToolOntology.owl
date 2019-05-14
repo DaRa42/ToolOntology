@@ -629,6 +629,7 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Age">
         <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_001013"/>
+        <ToolOntology:hasName>Age</ToolOntology:hasName>
     </owl:NamedIndividual>
     
 
@@ -637,6 +638,7 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_AgeMax">
         <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#maxAge"/>
+        <ToolOntology:hasName>Maximum Age</ToolOntology:hasName>
     </owl:NamedIndividual>
     
 
@@ -645,6 +647,7 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_AgeMin">
         <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#minAge"/>
+        <ToolOntology:hasName>Minimum Age</ToolOntology:hasName>
     </owl:NamedIndividual>
     
 
@@ -671,6 +674,7 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Lat">
         <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000319"/>
+        <ToolOntology:hasName>Latitude</ToolOntology:hasName>
     </owl:NamedIndividual>
     
 
@@ -679,6 +683,7 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Lon">
         <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000318"/>
+        <ToolOntology:hasName>Longitude</ToolOntology:hasName>
     </owl:NamedIndividual>
     
 
@@ -687,6 +692,7 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Region">
         <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000414"/>
+        <ToolOntology:hasName>Region</ToolOntology:hasName>
         <master:ToolOntology.owlhasSubregion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion1"/>
         <master:ToolOntology.owlhasSubregion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion2"/>
     </owl:NamedIndividual>
@@ -706,6 +712,7 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion1">
         <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000414"/>
+        <ToolOntology:hasName>Subregion 1</ToolOntology:hasName>
         <master:ToolOntology.owlhasParentRegion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Region"/>
         <master:ToolOntology.owlhasSubregion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion2"/>
     </owl:NamedIndividual>
@@ -716,6 +723,7 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion2">
         <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000414"/>
+        <ToolOntology:hasName>Subregion 2</ToolOntology:hasName>
         <master:ToolOntology.owlhasParentRegion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion1"/>
     </owl:NamedIndividual>
     
@@ -725,6 +733,7 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Year">
         <rdf:type rdf:resource="http://www.w3.org/2006/time#generalYear"/>
+        <ToolOntology:hasName>Year</ToolOntology:hasName>
     </owl:NamedIndividual>
     
 
