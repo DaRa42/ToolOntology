@@ -742,6 +742,8 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#MicEx">
         <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#VisTool"/>
+        <ToolOntology:needsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#MicEx_InputVariable"/>
+        <ToolOntology:needsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#MicEx_InputYear"/>
         <master:ToolOntology.owlcanHaveInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#MicEx_InputBinary"/>
         <master:ToolOntology.owlhasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MicrofaciesExplorer</master:ToolOntology.owlhasName>
         <master:ToolOntology.owlneedsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#MicEx_InputVariable"/>
