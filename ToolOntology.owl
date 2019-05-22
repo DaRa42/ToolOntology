@@ -1,1042 +1,1610 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl"
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:sio="http://semanticscience.org/ontology/sio/v1.43/sio-release.owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:cito="http://purl.org/spar/cito/"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:viso="http://purl.org/viso/data/"
-     xmlns:void="http://rdfs.org/ns/void#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:schema="http://schema.org/"
-     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
-     xmlns:resource="http://semanticscience.org/resource/"
-     xmlns:ToolOntology="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#">
-    <owl:Ontology rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl">
-        <owl:imports rdf:resource="http://purl.org/viso/data/"/>
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/micheldumontier/semanticscience/master/ontology/sio/release/sio-release.owl"/>
-        <terms:description>This ToolOntology contains descriptions about certain visualization software tools and their needed Data Input like scaletypes, satatypes and semantic requirements.</terms:description>
-        <rdfs:comment>Contains classes from http://purl.org/viso/data/</rdfs:comment>
-        <rdfs:comment>Contains classes from https://raw.githubusercontent.com/micheldumontier/semanticscience/master/ontology/sio/release/sio-release.owl</rdfs:comment>
-    </owl:Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/identifier -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/description -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
-    
-
-
-    <!-- http://semanticscience.org/resource/example -->
-
-    <owl:AnnotationProperty rdf:about="http://semanticscience.org/resource/example"/>
-    
-
-
-    <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#term_status -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
-    
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#changeNote -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#changeNote"/>
-    
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#definition -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
-    
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#note -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
-    
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#canHaveInputType -->
-
-    <owl:AnnotationProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#canHaveInputType">
-        <rdfs:range rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasDatatype -->
-
-    <owl:AnnotationProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasDatatype">
-        <rdfs:range rdf:resource="http://purl.org/viso/data/Data"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasMaxCardinality -->
-
-    <owl:AnnotationProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasMaxCardinality">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasMinCardinality -->
-
-    <owl:AnnotationProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasMinCardinality">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasName -->
-
-    <owl:AnnotationProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasName">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Name"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasParentRegion -->
-
-    <owl:AnnotationProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasParentRegion">
-        <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000414"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasScaletype -->
-
-    <owl:AnnotationProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasScaletype">
-        <rdfs:range rdf:resource="http://purl.org/viso/data/Scale_of_Measurement"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasSubregion -->
-
-    <owl:AnnotationProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasSubregion">
-        <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000414"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#needsInputType -->
-
-    <owl:AnnotationProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#needsInputType">
-        <rdfs:range rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#canHaveInputType -->
-
-    <owl:ObjectProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#canHaveInputType">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdfs:domain rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#VisTool"/>
-        <owl:propertyDisjointWith rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#needsInputType"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasDatatype -->
-
-    <owl:ObjectProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasDatatype">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdfs:domain rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasInputType -->
-
-    <owl:ObjectProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasInputType">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://purl.org/viso/data/Tabular_Data_Structure"/>
-        <rdfs:range rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <terms:description>the input type from a dataset (usually a table column)</terms:description>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasParentRegion -->
-
-    <owl:ObjectProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasParentRegion">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000414"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasPrimitiveType -->
-
-    <owl:ObjectProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasPrimitiveType">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdfs:domain rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <rdfs:range rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Primitive_Data_Types"/>
-        <terms:description>the basic datatype of an input type</terms:description>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasScaletype -->
-
-    <owl:ObjectProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasScaletype">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdfs:domain rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasSubregion -->
-
-    <owl:ObjectProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasSubregion">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000414"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#needsInputType -->
-
-    <owl:ObjectProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#needsInputType">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdfs:domain rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#VisTool"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.w3.org/2006/time#days -->
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#days"/>
-    
-
-
-    <!-- http://www.w3.org/2006/time#hours -->
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#hours"/>
-    
-
-
-    <!-- http://www.w3.org/2006/time#minutes -->
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#minutes"/>
-    
-
-
-    <!-- http://www.w3.org/2006/time#months -->
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#months"/>
-    
-
-
-    <!-- http://www.w3.org/2006/time#seconds -->
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#seconds"/>
-    
-
-
-    <!-- http://www.w3.org/2006/time#weeks -->
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#weeks"/>
-    
-
-
-    <!-- http://www.w3.org/2006/time#years -->
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#years"/>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasMaxCardinality -->
-
-    <owl:DatatypeProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasMaxCardinality"/>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasMinCardinality -->
-
-    <owl:DatatypeProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasMinCardinality"/>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasName -->
-
-    <owl:DatatypeProperty rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasName">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.org/viso/data/Data -->
-
-    <owl:Class rdf:about="http://purl.org/viso/data/Data">
-        <terms:description>Datatypes for describing visualization tools</terms:description>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/viso/data/Geographical_Data -->
-
-    <owl:Class rdf:about="http://purl.org/viso/data/Geographical_Data">
-        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Spatial_Data"/>
-        <rdfs:label>Geographical Data</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/viso/data/Nominal_Scale_of_Measurement -->
-
-    <owl:Class rdf:about="http://purl.org/viso/data/Nominal_Scale_of_Measurement">
-        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Scale_of_Measurement"/>
-        <terms:description>A qualitative scale type with non-metric features. Differentiation is possible, but no natural order is given.</terms:description>
-        <rdfs:label>Nominal Scale of Measurement</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/viso/data/Ordinal_Scale_of_Measurement -->
-
-    <owl:Class rdf:about="http://purl.org/viso/data/Ordinal_Scale_of_Measurement">
-        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Scale_of_Measurement"/>
-        <terms:description>A qualitative scale type with non-metric features. Differentiation is possible, and an order is given, but it does not allow for relative degree of difference calculations.</terms:description>
-        <rdfs:label>Ordinal Scale of Measurement</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/viso/data/Physical_Data -->
-
-    <owl:Class rdf:about="http://purl.org/viso/data/Physical_Data">
-        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Data"/>
-        <terms:description>Datatypes for physical data types, for example space and time.</terms:description>
-        <rdfs:label>Physical Data</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/viso/data/Quantitative_Scale_of_Measurement -->
-
-    <owl:Class rdf:about="http://purl.org/viso/data/Quantitative_Scale_of_Measurement">
-        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Scale_of_Measurement"/>
-        <terms:description>The quantitative scale types include the interval scale and the ratio scale. They have a natural order and distances and mean values can be calculated. The ratio scale also has a zero point.</terms:description>
-        <rdfs:label>Quantitative Scale of Measurement</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/viso/data/Scale_of_Measurement -->
-
-    <owl:Class rdf:about="http://purl.org/viso/data/Scale_of_Measurement">
-        <terms:description>Describes the kind of values in measured data.</terms:description>
-        <rdfs:label>Scale of Measurement</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/viso/data/Spatial_Data -->
-
-    <owl:Class rdf:about="http://purl.org/viso/data/Spatial_Data">
-        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Physical_Data"/>
-        <terms:description>Datatypes describing location, size and shape.</terms:description>
-        <rdfs:label>Spatial Data</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/viso/data/Temporal_Data -->
-
-    <owl:Class rdf:about="http://purl.org/viso/data/Temporal_Data">
-        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Physical_Data"/>
-        <terms:description>Datatypes describing time related attributes.</terms:description>
-        <rdfs:label>Temporal Data</rdfs:label>
-        <ns:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stable</ns:term_status>
-    </owl:Class>
-    
-
-
-    <!-- http://semanticscience.org/resource/SIO_000013 -->
-
-    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000013">
-        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Geographical_Data"/>
-        <dc:identifier>SIO_000013</dc:identifier>
-        <terms:description xml:lang="en">A geographic position is the coordinate of an entity against some geographic coordinate system.</terms:description>
-        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
-        <rdfs:label>Position</rdfs:label>
-        <rdfs:label xml:lang="en">geographic position</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://semanticscience.org/resource/SIO_000318 -->
-
-    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000318">
-        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000013"/>
-        <owl:disjointWith rdf:resource="http://semanticscience.org/resource/SIO_000319"/>
-        <dc:identifier>SIO_000318</dc:identifier>
-        <terms:description xml:lang="en">Longitude is a geographic position that refers to  the angle east or west of a reference meridian between the two geographical poles to another meridian that passes through an arbitrary point.</terms:description>
-        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
-        <rdfs:label>Longitude</rdfs:label>
-        <rdfs:label xml:lang="en">longitude</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://semanticscience.org/resource/SIO_000319 -->
-
-    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000319">
-        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000013"/>
-        <dc:identifier>SIO_000319</dc:identifier>
-        <terms:description xml:lang="en">Latitude is a geographic coordinate which refers to the angle from a point on the Earth&apos;s surface to the equatorial plane</terms:description>
-        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
-        <rdfs:label>Latitude</rdfs:label>
-        <rdfs:label xml:lang="en">latitude</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://semanticscience.org/resource/SIO_000414 -->
-
-    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000414">
-        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Geographical_Data"/>
-        <dc:identifier>SIO_000414</dc:identifier>
-        <terms:description xml:lang="en">A geographic region is a spatial region whose boundaries are typically defined against some material frame of reference (like the earth).</terms:description>
-        <resource:example xml:lang="en">The spatial region occupied by the province of ontario; the spatial region occupied by a lake.</resource:example>
-        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
-        <rdfs:label>Region</rdfs:label>
-        <rdfs:label xml:lang="en">geographic region</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://semanticscience.org/resource/SIO_001013 -->
-
-    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_001013">
-        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Temporal_Data"/>
-        <dc:identifier>SIO_001013</dc:identifier>
-        <terms:description xml:lang="en">age is the length of time that a person has lived or a thing has existed.</terms:description>
-        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
-        <rdfs:label>Age</rdfs:label>
-        <rdfs:label xml:lang="en">age</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3.org/2006/time#generalYear -->
-
-    <owl:Class rdf:about="http://www.w3.org/2006/time#generalYear">
-        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Temporal_Data"/>
-        <rdfs:comment xml:lang="en">Year number - formulated as a text string with a pattern constraint to reproduce the same lexical form as gYear, but not restricted to values from the Gregorian calendar. 
-Note that the value-space is not defined, so a generic OWL2 processor cannot compute ordering relationships of values of this type.</rdfs:comment>
-        <rdfs:label xml:lang="en">Generalized year</rdfs:label>
-        <rdfs:label>Year</rdfs:label>
-        <skos:definition xml:lang="en">Year number - generalization of xsd:gYear, formulated as a text string with a pattern constraint to reproduce the same lexical form as gYear. Note that the value-space is not defined, so a generic OWL2 processor cannot compute ordering relationships of values of this type.</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Double -->
-
-    <owl:Class rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Double">
-        <rdfs:subClassOf rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Primitive_Data_Types"/>
-        <terms:description>A floating-point number.</terms:description>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType -->
-
-    <owl:Class rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasPrimitiveType"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Primitive_Data_Types"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasScaletype"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/viso/data/Scale_of_Measurement"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasName"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <terms:description>The input type for a visualization tool. For tools which need tabledata input, one input type usually refers to one table column.</terms:description>
-        <rdfs:label>Input Type</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Integer -->
-
-    <owl:Class rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Integer">
-        <rdfs:subClassOf rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Primitive_Data_Types"/>
-        <terms:description>A whole number.</terms:description>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Primitive_Data_Types -->
-
-    <owl:Class rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Primitive_Data_Types">
-        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Data"/>
-        <terms:description>Basic Datatypes like Integer, Double, String...</terms:description>
-        <rdfs:label>Primitive Data Types</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#String -->
-
-    <owl:Class rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#String">
-        <rdfs:subClassOf rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Primitive_Data_Types"/>
-        <terms:description>A sequence of characters.</terms:description>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#VisTool -->
-
-    <owl:Class rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#VisTool">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#needsInputType"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>Visualization Tool</rdfs:label>
-        <skos:definition>A Software for visualizing data</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#maxAge -->
-
-    <owl:Class rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#maxAge">
-        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Temporal_Data"/>
-        <terms:description>If an Entitiy has an uncertain age value or an age span, this defines the maximum value.</terms:description>
-        <rdfs:label>Maximum Age</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#minAge -->
-
-    <owl:Class rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#minAge">
-        <rdfs:subClassOf rdf:resource="http://purl.org/viso/data/Temporal_Data"/>
-        <terms:description>If an Entitiy has an uncertain age value or an age span, this defines the maximum value.</terms:description>
-        <rdfs:label>Minimum Age</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Age -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Age">
-        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_001013"/>
-        <ToolOntology:hasName>Age</ToolOntology:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_AgeMax -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_AgeMax">
-        <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#maxAge"/>
-        <ToolOntology:hasName>Maximum Age</ToolOntology:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_AgeMin -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_AgeMin">
-        <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#minAge"/>
-        <ToolOntology:hasName>Minimum Age</ToolOntology:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Double -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Double">
-        <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Double"/>
-        <ToolOntology:hasName>Double</ToolOntology:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Integer -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Integer">
-        <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Integer"/>
-        <ToolOntology:hasName>Integer</ToolOntology:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Lat -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Lat">
-        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000319"/>
-        <ToolOntology:hasName>Latitude</ToolOntology:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Lon -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Lon">
-        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000318"/>
-        <ToolOntology:hasName>Longitude</ToolOntology:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Region -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Region">
-        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000414"/>
-        <ToolOntology:hasName>Region</ToolOntology:hasName>
-        <ToolOntology:hasSubregion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion1"/>
-        <ToolOntology:hasSubregion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion2"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_String -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_String">
-        <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#String"/>
-        <ToolOntology:hasName>String</ToolOntology:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion1 -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion1">
-        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000414"/>
-        <ToolOntology:hasName>Subregion 1</ToolOntology:hasName>
-        <ToolOntology:hasParentRegion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Region"/>
-        <ToolOntology:hasSubregion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion2"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion2 -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion2">
-        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000414"/>
-        <ToolOntology:hasName>Subregion 2</ToolOntology:hasName>
-        <ToolOntology:hasParentRegion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion1"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Year -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Year">
-        <rdf:type rdf:resource="http://www.w3.org/2006/time#generalYear"/>
-        <ToolOntology:hasName>Year</ToolOntology:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#MicEx -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#MicEx">
-        <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#VisTool"/>
-        <ToolOntology:canHaveInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#MicEx_InputBinary"/>
-        <ToolOntology:needsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#MicEx_InputVariable"/>
-        <ToolOntology:needsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#MicEx_InputYear"/>
-        <ToolOntology:hasName>Microfacies Explorer</ToolOntology:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#MicEx_InputBinary -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#MicEx_InputBinary">
-        <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <ToolOntology:hasPrimitiveType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Double"/>
-        <ToolOntology:hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</ToolOntology:hasMinCardinality>
-        <ToolOntology:hasName>toBinary</ToolOntology:hasName>
-        <ToolOntology:hasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Ordinal"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#MicEx_InputVariable -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#MicEx_InputVariable">
-        <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <ToolOntology:hasPrimitiveType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_String"/>
-        <ToolOntology:hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ToolOntology:hasMinCardinality>
-        <ToolOntology:hasName>variable</ToolOntology:hasName>
-        <ToolOntology:hasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Nominal"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#MicEx_InputYear -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#MicEx_InputYear">
-        <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <ToolOntology:hasPrimitiveType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Integer"/>
-        <ToolOntology:hasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Year"/>
-        <ToolOntology:hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ToolOntology:hasMaxCardinality>
-        <ToolOntology:hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ToolOntology:hasMinCardinality>
-        <ToolOntology:hasName>year</ToolOntology:hasName>
-        <ToolOntology:hasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Quantitative"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Nominal -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Nominal">
-        <rdf:type rdf:resource="http://purl.org/viso/data/Nominal_Scale_of_Measurement"/>
-        <ToolOntology:hasName>Nominal</ToolOntology:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Ordinal -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Ordinal">
-        <rdf:type rdf:resource="http://purl.org/viso/data/Ordinal_Scale_of_Measurement"/>
-        <ToolOntology:hasName>Ordinal</ToolOntology:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Quantitative -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Quantitative">
-        <rdf:type rdf:resource="http://purl.org/viso/data/Quantitative_Scale_of_Measurement"/>
-        <ToolOntology:hasName>Quantitative</ToolOntology:hasName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu">
-        <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#VisTool"/>
-        <ToolOntology:hasName>Slivisu</ToolOntology:hasName>
-        <ToolOntology:needsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputAge"/>
-        <ToolOntology:needsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputAgeMax"/>
-        <ToolOntology:needsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputAgeMin"/>
-        <ToolOntology:needsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputCategory"/>
-        <ToolOntology:needsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputLat"/>
-        <ToolOntology:needsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputLon"/>
-        <ToolOntology:needsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputRegion"/>
-        <ToolOntology:needsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputSubregion1"/>
-        <ToolOntology:needsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputSubregion2"/>
-        <ToolOntology:needsInputType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputYear"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputAge -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputAge">
-        <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <ToolOntology:hasPrimitiveType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Integer"/>
-        <ToolOntology:hasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Age"/>
-        <ToolOntology:hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ToolOntology:hasMaxCardinality>
-        <ToolOntology:hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ToolOntology:hasMinCardinality>
-        <ToolOntology:hasName>age</ToolOntology:hasName>
-        <ToolOntology:hasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Quantitative"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputAgeMax -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputAgeMax">
-        <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <ToolOntology:hasPrimitiveType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Integer"/>
-        <ToolOntology:hasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_AgeMax"/>
-        <ToolOntology:hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ToolOntology:hasMaxCardinality>
-        <ToolOntology:hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ToolOntology:hasMinCardinality>
-        <ToolOntology:hasName>ageMax</ToolOntology:hasName>
-        <ToolOntology:hasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Quantitative"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputAgeMin -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputAgeMin">
-        <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <ToolOntology:hasPrimitiveType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Integer"/>
-        <ToolOntology:hasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_AgeMin"/>
-        <ToolOntology:hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ToolOntology:hasMaxCardinality>
-        <ToolOntology:hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ToolOntology:hasMinCardinality>
-        <ToolOntology:hasName>ageMin</ToolOntology:hasName>
-        <ToolOntology:hasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Quantitative"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputCategory -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputCategory">
-        <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <ToolOntology:hasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_String"/>
-        <ToolOntology:hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ToolOntology:hasMaxCardinality>
-        <ToolOntology:hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ToolOntology:hasMinCardinality>
-        <ToolOntology:hasName>category</ToolOntology:hasName>
-        <ToolOntology:hasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Nominal"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputLat -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputLat">
-        <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <ToolOntology:hasPrimitiveType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Double"/>
-        <ToolOntology:hasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Lat"/>
-        <ToolOntology:hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ToolOntology:hasMaxCardinality>
-        <ToolOntology:hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ToolOntology:hasMinCardinality>
-        <ToolOntology:hasName>latitude</ToolOntology:hasName>
-        <ToolOntology:hasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Ordinal"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputLon -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputLon">
-        <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <ToolOntology:hasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Lon"/>
-        <ToolOntology:hasPrimitiveType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Double"/>
-        <ToolOntology:hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ToolOntology:hasMaxCardinality>
-        <ToolOntology:hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ToolOntology:hasMinCardinality>
-        <ToolOntology:hasName>Longitude</ToolOntology:hasName>
-        <ToolOntology:hasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Ordinal"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputRegion -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputRegion">
-        <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <ToolOntology:hasPrimitiveType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_String"/>
-        <ToolOntology:hasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Region"/>
-        <ToolOntology:hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ToolOntology:hasMaxCardinality>
-        <ToolOntology:hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ToolOntology:hasMinCardinality>
-        <ToolOntology:hasName>region</ToolOntology:hasName>
-        <ToolOntology:hasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Nominal"/>
-        <ToolOntology:hasSubregion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputSubregion1"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputSubregion1 -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputSubregion1">
-        <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <ToolOntology:hasPrimitiveType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_String"/>
-        <ToolOntology:hasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion1"/>
-        <ToolOntology:hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ToolOntology:hasMaxCardinality>
-        <ToolOntology:hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ToolOntology:hasMinCardinality>
-        <ToolOntology:hasName>subregion1</ToolOntology:hasName>
-        <ToolOntology:hasParentRegion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputRegion"/>
-        <ToolOntology:hasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Nominal"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputSubregion2 -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputSubregion2">
-        <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <ToolOntology:hasPrimitiveType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_String"/>
-        <ToolOntology:hasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Subregion2"/>
-        <ToolOntology:hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ToolOntology:hasMaxCardinality>
-        <ToolOntology:hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ToolOntology:hasMinCardinality>
-        <ToolOntology:hasName>Subregion2</ToolOntology:hasName>
-        <ToolOntology:hasParentRegion rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputSubregion1"/>
-        <ToolOntology:hasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Nominal"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputYear -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputYear">
-        <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <ToolOntology:hasPrimitiveType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Integer"/>
-        <ToolOntology:hasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Year"/>
-        <ToolOntology:hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ToolOntology:hasMaxCardinality>
-        <ToolOntology:hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ToolOntology:hasMinCardinality>
-        <ToolOntology:hasName>year</ToolOntology:hasName>
-        <ToolOntology:hasScaletype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Scaletype_Quantitative"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#canHaveInputType">
-        <terms:description>an input type which is optional for a vis tool</terms:description>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasDatatype">
-        <terms:description>refers to the semantic data type for an input type</terms:description>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasMaxCardinality">
-        <rdfs:comment>the maximum cardinality allowed for an input type</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasMinCardinality">
-        <rdfs:comment>the minimum cardinality needed for an input type</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasName">
-        <rdfs:comment>the name of an input type</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasParentRegion">
-        <terms:description>defines the parent region of a subregion</terms:description>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasScaletype">
-        <terms:description>the scale type for an input type</terms:description>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#hasSubregion">
-        <terms:description>defines the subregion of a region</terms:description>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#needsInputType">
-        <terms:description>an input type needed by the vis tool</terms:description>
-    </rdf:Description>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // General axioms
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/viso/data/Nominal_Scale_of_Measurement"/>
-            <rdf:Description rdf:about="http://purl.org/viso/data/Ordinal_Scale_of_Measurement"/>
-            <rdf:Description rdf:about="http://purl.org/viso/data/Quantitative_Scale_of_Measurement"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/viso/data/Physical_Data"/>
-            <rdf:Description rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Double"/>
-            <rdf:Description rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Integer"/>
-            <rdf:Description rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#String"/>
-        </owl:members>
-    </rdf:Description>
-</rdf:RDF>
+     ontologyIRI="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl">
+    <Prefix name="" IRI="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="ns" IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="sio" IRI="http://semanticscience.org/ontology/sio/v1.43/sio-release.owl#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="cito" IRI="http://purl.org/spar/cito/"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
+    <Prefix name="viso" IRI="http://purl.org/viso/data/"/>
+    <Prefix name="void" IRI="http://rdfs.org/ns/void#"/>
+    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="schema" IRI="http://schema.org/"/>
+    <Prefix name="protege" IRI="http://protege.stanford.edu/plugins/owl/protege#"/>
+    <Prefix name="resource" IRI="http://semanticscience.org/resource/"/>
+    <Prefix name="ToolOntology" IRI="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#"/>
+    <Import>http://purl.org/viso/data/</Import>
+    <Import>https://raw.githubusercontent.com/micheldumontier/semanticscience/master/ontology/sio/release/sio-release.owl</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <Literal>This ToolOntology contains descriptions about certain visualization software tools and their needed Data Input like scaletypes, satatypes and semantic requirements.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Contains classes from http://purl.org/viso/data/</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Contains classes from https://raw.githubusercontent.com/micheldumontier/semanticscience/master/ontology/sio/release/sio-release.owl</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="viso:Data"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="viso:Geographical_Data"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="viso:Nominal_Scale_of_Measurement"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="viso:Ordinal_Scale_of_Measurement"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="viso:Physical_Data"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="viso:Quantitative_Scale_of_Measurement"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="viso:Scale_of_Measurement"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="viso:Spatial_Data"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="viso:Temporal_Data"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="resource:SIO_000013"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="resource:SIO_000318"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="resource:SIO_000319"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="resource:SIO_000414"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="resource:SIO_001013"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/time#generalYear"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Double"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InputType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Integer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Primitive_Data_Types"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#String"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VisTool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#maxAge"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#minAge"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#canHaveInputType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDatatype"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasInputType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasParentRegion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasScaletype"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSubregion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#needsInputType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/time#days"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/time#hours"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/time#minutes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/time#months"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/time#seconds"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/time#weeks"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/time#years"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMaxCardinality"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMinCardinality"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Data_Age"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Data_AgeMax"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Data_AgeMin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Data_Double"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Data_Integer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Data_Lat"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Data_Lon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Data_Region"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Data_String"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Data_Subregion1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Data_Subregion2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Data_Year"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MicEx"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MicEx_InputBinary"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MicEx_InputVariable"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MicEx_InputYear"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Scaletype_Nominal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Scaletype_Ordinal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Scaletype_Quantitative"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Slivisu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Slivisu_InputAge"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Slivisu_InputAgeMax"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Slivisu_InputAgeMin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Slivisu_InputCategory"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Slivisu_InputLat"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Slivisu_InputLon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Slivisu_InputRegion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Slivisu_InputSubregion1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Slivisu_InputSubregion2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Slivisu_InputYear"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="resource:example"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:changeNote"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#canHaveInputType"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#hasDatatype"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#hasMaxCardinality"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#hasMinCardinality"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#hasName"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#hasParentRegion"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#hasScaletype"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#hasSubregion"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#needsInputType"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="viso:Geographical_Data"/>
+        <Class abbreviatedIRI="viso:Spatial_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="viso:Nominal_Scale_of_Measurement"/>
+        <Class abbreviatedIRI="viso:Scale_of_Measurement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="viso:Ordinal_Scale_of_Measurement"/>
+        <Class abbreviatedIRI="viso:Scale_of_Measurement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="viso:Physical_Data"/>
+        <Class abbreviatedIRI="viso:Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="viso:Quantitative_Scale_of_Measurement"/>
+        <Class abbreviatedIRI="viso:Scale_of_Measurement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="viso:Spatial_Data"/>
+        <Class abbreviatedIRI="viso:Physical_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="viso:Temporal_Data"/>
+        <Class abbreviatedIRI="viso:Physical_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="resource:SIO_000013"/>
+        <Class abbreviatedIRI="viso:Geographical_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="resource:SIO_000318"/>
+        <Class abbreviatedIRI="resource:SIO_000013"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="resource:SIO_000319"/>
+        <Class abbreviatedIRI="resource:SIO_000013"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="resource:SIO_000414"/>
+        <Class abbreviatedIRI="viso:Geographical_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="resource:SIO_001013"/>
+        <Class abbreviatedIRI="viso:Temporal_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/time#generalYear"/>
+        <Class abbreviatedIRI="viso:Temporal_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Double"/>
+        <Class IRI="#Primitive_Data_Types"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InputType"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasPrimitiveType"/>
+            <Class IRI="#Primitive_Data_Types"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InputType"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasScaletype"/>
+            <Class abbreviatedIRI="viso:Scale_of_Measurement"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InputType"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Integer"/>
+        <Class IRI="#Primitive_Data_Types"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Primitive_Data_Types"/>
+        <Class abbreviatedIRI="viso:Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#String"/>
+        <Class IRI="#Primitive_Data_Types"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VisTool"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#needsInputType"/>
+            <Class IRI="#InputType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#maxAge"/>
+        <Class abbreviatedIRI="viso:Temporal_Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#minAge"/>
+        <Class abbreviatedIRI="viso:Temporal_Data"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class abbreviatedIRI="viso:Nominal_Scale_of_Measurement"/>
+        <Class abbreviatedIRI="viso:Ordinal_Scale_of_Measurement"/>
+        <Class abbreviatedIRI="viso:Quantitative_Scale_of_Measurement"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="viso:Physical_Data"/>
+        <Class IRI="#Double"/>
+        <Class IRI="#Integer"/>
+        <Class IRI="#String"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="resource:SIO_000318"/>
+        <Class abbreviatedIRI="resource:SIO_000319"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class abbreviatedIRI="resource:SIO_001013"/>
+        <NamedIndividual IRI="#Data_Age"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#maxAge"/>
+        <NamedIndividual IRI="#Data_AgeMax"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#minAge"/>
+        <NamedIndividual IRI="#Data_AgeMin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Double"/>
+        <NamedIndividual IRI="#Data_Double"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Integer"/>
+        <NamedIndividual IRI="#Data_Integer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="resource:SIO_000319"/>
+        <NamedIndividual IRI="#Data_Lat"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="resource:SIO_000318"/>
+        <NamedIndividual IRI="#Data_Lon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="resource:SIO_000414"/>
+        <NamedIndividual IRI="#Data_Region"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#String"/>
+        <NamedIndividual IRI="#Data_String"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="resource:SIO_000414"/>
+        <NamedIndividual IRI="#Data_Subregion1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="resource:SIO_000414"/>
+        <NamedIndividual IRI="#Data_Subregion2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/2006/time#generalYear"/>
+        <NamedIndividual IRI="#Data_Year"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VisTool"/>
+        <NamedIndividual IRI="#MicEx"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="#MicEx_InputBinary"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="#MicEx_InputVariable"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="#MicEx_InputYear"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="viso:Nominal_Scale_of_Measurement"/>
+        <NamedIndividual IRI="#Scaletype_Nominal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="viso:Ordinal_Scale_of_Measurement"/>
+        <NamedIndividual IRI="#Scaletype_Ordinal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="viso:Quantitative_Scale_of_Measurement"/>
+        <NamedIndividual IRI="#Scaletype_Quantitative"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VisTool"/>
+        <NamedIndividual IRI="#Slivisu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="#Slivisu_InputAge"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="#Slivisu_InputAgeMax"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="#Slivisu_InputAgeMin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="#Slivisu_InputCategory"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="#Slivisu_InputLat"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="#Slivisu_InputLon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="#Slivisu_InputRegion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="#Slivisu_InputSubregion1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="#Slivisu_InputSubregion2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="#Slivisu_InputYear"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canHaveInputType"/>
+        <NamedIndividual IRI="#MicEx"/>
+        <NamedIndividual IRI="#MicEx_InputBinary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#needsInputType"/>
+        <NamedIndividual IRI="#MicEx"/>
+        <NamedIndividual IRI="#MicEx_InputVariable"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#needsInputType"/>
+        <NamedIndividual IRI="#MicEx"/>
+        <NamedIndividual IRI="#MicEx_InputYear"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="#MicEx_InputBinary"/>
+        <NamedIndividual IRI="#Data_Double"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="#MicEx_InputVariable"/>
+        <NamedIndividual IRI="#Data_String"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="#MicEx_InputYear"/>
+        <NamedIndividual IRI="#Data_Integer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="#Slivisu_InputAge"/>
+        <NamedIndividual IRI="#Data_Integer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="#Slivisu_InputAgeMax"/>
+        <NamedIndividual IRI="#Data_Integer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="#Slivisu_InputAgeMin"/>
+        <NamedIndividual IRI="#Data_Integer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="#Slivisu_InputLat"/>
+        <NamedIndividual IRI="#Data_Double"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDatatype"/>
+        <NamedIndividual IRI="#Slivisu_InputLon"/>
+        <NamedIndividual IRI="#Data_Lon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="#Slivisu_InputLon"/>
+        <NamedIndividual IRI="#Data_Double"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="#Slivisu_InputRegion"/>
+        <NamedIndividual IRI="#Data_String"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="#Slivisu_InputSubregion1"/>
+        <NamedIndividual IRI="#Data_String"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="#Slivisu_InputSubregion2"/>
+        <NamedIndividual IRI="#Data_String"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="#Slivisu_InputYear"/>
+        <NamedIndividual IRI="#Data_Integer"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#MicEx"/>
+        <Literal>Microfacies Explorer</Literal>
+    </DataPropertyAssertion>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasDatatype"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasScaletype"/>
+    </FunctionalObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#canHaveInputType"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasDatatype"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasInputType"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasScaletype"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#needsInputType"/>
+    </AsymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#hasParentRegion"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#hasSubregion"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#canHaveInputType"/>
+        <Class IRI="#VisTool"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDatatype"/>
+        <Class IRI="#InputType"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasInputType"/>
+        <Class abbreviatedIRI="viso:Tabular_Data_Structure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasParentRegion"/>
+        <Class abbreviatedIRI="resource:SIO_000414"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <Class IRI="#InputType"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasScaletype"/>
+        <Class IRI="#InputType"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSubregion"/>
+        <Class abbreviatedIRI="resource:SIO_000414"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#needsInputType"/>
+        <Class IRI="#VisTool"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasInputType"/>
+        <Class IRI="#InputType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <Class IRI="#Primitive_Data_Types"/>
+    </ObjectPropertyRange>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#canHaveInputType"/>
+        <ObjectProperty IRI="#needsInputType"/>
+    </DisjointObjectProperties>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasName"/>
+    </FunctionalDataProperty>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>viso:Data</AbbreviatedIRI>
+        <Literal>Datatypes for describing visualization tools</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>viso:Geographical_Data</AbbreviatedIRI>
+        <Literal>Geographical Data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>viso:Nominal_Scale_of_Measurement</AbbreviatedIRI>
+        <Literal>A qualitative scale type with non-metric features. Differentiation is possible, but no natural order is given.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>viso:Nominal_Scale_of_Measurement</AbbreviatedIRI>
+        <Literal>Nominal Scale of Measurement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <AbbreviatedIRI>viso:Nominal_Scale_of_Measurement</AbbreviatedIRI>
+        <Literal>stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>viso:Ordinal_Scale_of_Measurement</AbbreviatedIRI>
+        <Literal>A qualitative scale type with non-metric features. Differentiation is possible, and an order is given, but it does not allow for relative degree of difference calculations.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>viso:Ordinal_Scale_of_Measurement</AbbreviatedIRI>
+        <Literal>Ordinal Scale of Measurement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <AbbreviatedIRI>viso:Ordinal_Scale_of_Measurement</AbbreviatedIRI>
+        <Literal>stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>viso:Physical_Data</AbbreviatedIRI>
+        <Literal>Datatypes for physical data types, for example space and time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>viso:Physical_Data</AbbreviatedIRI>
+        <Literal>Physical Data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <AbbreviatedIRI>viso:Physical_Data</AbbreviatedIRI>
+        <Literal>stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>viso:Quantitative_Scale_of_Measurement</AbbreviatedIRI>
+        <Literal>The quantitative scale types include the interval scale and the ratio scale. They have a natural order and distances and mean values can be calculated. The ratio scale also has a zero point.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>viso:Quantitative_Scale_of_Measurement</AbbreviatedIRI>
+        <Literal>Quantitative Scale of Measurement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <AbbreviatedIRI>viso:Quantitative_Scale_of_Measurement</AbbreviatedIRI>
+        <Literal>stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>viso:Scale_of_Measurement</AbbreviatedIRI>
+        <Literal>Describes the kind of values in measured data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>viso:Scale_of_Measurement</AbbreviatedIRI>
+        <Literal>Scale of Measurement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>viso:Spatial_Data</AbbreviatedIRI>
+        <Literal>Datatypes describing location, size and shape.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>viso:Spatial_Data</AbbreviatedIRI>
+        <Literal>Spatial Data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <AbbreviatedIRI>viso:Spatial_Data</AbbreviatedIRI>
+        <Literal>stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>viso:Temporal_Data</AbbreviatedIRI>
+        <Literal>Datatypes describing time related attributes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>viso:Temporal_Data</AbbreviatedIRI>
+        <Literal>Temporal Data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <AbbreviatedIRI>viso:Temporal_Data</AbbreviatedIRI>
+        <Literal>stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
+        <AbbreviatedIRI>resource:SIO_000013</AbbreviatedIRI>
+        <Literal>SIO_000013</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>resource:SIO_000013</AbbreviatedIRI>
+        <Literal xml:lang="en">A geographic position is the coordinate of an entity against some geographic coordinate system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>resource:SIO_000013</AbbreviatedIRI>
+        <IRI>http://semanticscience.org/ontology/sio.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>resource:SIO_000013</AbbreviatedIRI>
+        <Literal>Position</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>resource:SIO_000013</AbbreviatedIRI>
+        <Literal xml:lang="en">geographic position</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
+        <AbbreviatedIRI>resource:SIO_000318</AbbreviatedIRI>
+        <Literal>SIO_000318</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>resource:SIO_000318</AbbreviatedIRI>
+        <Literal xml:lang="en">Longitude is a geographic position that refers to  the angle east or west of a reference meridian between the two geographical poles to another meridian that passes through an arbitrary point.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>resource:SIO_000318</AbbreviatedIRI>
+        <IRI>http://semanticscience.org/ontology/sio.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>resource:SIO_000318</AbbreviatedIRI>
+        <Literal>Longitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>resource:SIO_000318</AbbreviatedIRI>
+        <Literal xml:lang="en">longitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
+        <AbbreviatedIRI>resource:SIO_000319</AbbreviatedIRI>
+        <Literal>SIO_000319</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>resource:SIO_000319</AbbreviatedIRI>
+        <Literal xml:lang="en">Latitude is a geographic coordinate which refers to the angle from a point on the Earth&apos;s surface to the equatorial plane</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>resource:SIO_000319</AbbreviatedIRI>
+        <IRI>http://semanticscience.org/ontology/sio.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>resource:SIO_000319</AbbreviatedIRI>
+        <Literal>Latitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>resource:SIO_000319</AbbreviatedIRI>
+        <Literal xml:lang="en">latitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
+        <AbbreviatedIRI>resource:SIO_000414</AbbreviatedIRI>
+        <Literal>SIO_000414</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>resource:SIO_000414</AbbreviatedIRI>
+        <Literal xml:lang="en">A geographic region is a spatial region whose boundaries are typically defined against some material frame of reference (like the earth).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="resource:example"/>
+        <AbbreviatedIRI>resource:SIO_000414</AbbreviatedIRI>
+        <Literal xml:lang="en">The spatial region occupied by the province of ontario; the spatial region occupied by a lake.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>resource:SIO_000414</AbbreviatedIRI>
+        <IRI>http://semanticscience.org/ontology/sio.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>resource:SIO_000414</AbbreviatedIRI>
+        <Literal>Region</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>resource:SIO_000414</AbbreviatedIRI>
+        <Literal xml:lang="en">geographic region</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
+        <AbbreviatedIRI>resource:SIO_001013</AbbreviatedIRI>
+        <Literal>SIO_001013</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>resource:SIO_001013</AbbreviatedIRI>
+        <Literal xml:lang="en">age is the length of time that a person has lived or a thing has existed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>resource:SIO_001013</AbbreviatedIRI>
+        <IRI>http://semanticscience.org/ontology/sio.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>resource:SIO_001013</AbbreviatedIRI>
+        <Literal>Age</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>resource:SIO_001013</AbbreviatedIRI>
+        <Literal xml:lang="en">age</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/2006/time#generalYear</IRI>
+        <Literal xml:lang="en">Year number - formulated as a text string with a pattern constraint to reproduce the same lexical form as gYear, but not restricted to values from the Gregorian calendar. 
+Note that the value-space is not defined, so a generic OWL2 processor cannot compute ordering relationships of values of this type.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/time#generalYear</IRI>
+        <Literal xml:lang="en">Generalized year</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2006/time#generalYear</IRI>
+        <Literal>Year</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>http://www.w3.org/2006/time#generalYear</IRI>
+        <Literal xml:lang="en">Year number - generalization of xsd:gYear, formulated as a text string with a pattern constraint to reproduce the same lexical form as gYear. Note that the value-space is not defined, so a generic OWL2 processor cannot compute ordering relationships of values of this type.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#Data_Age</IRI>
+        <Literal>Age</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#Data_AgeMax</IRI>
+        <Literal>Maximum Age</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#Data_AgeMin</IRI>
+        <Literal>Minimum Age</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#Data_Double</IRI>
+        <Literal>Double</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#Data_Integer</IRI>
+        <Literal>Integer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#Data_Lat</IRI>
+        <Literal>Latitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#Data_Lon</IRI>
+        <Literal>Longitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#Data_Region</IRI>
+        <Literal>Region</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasSubregion"/>
+        <IRI>#Data_Region</IRI>
+        <IRI>#Data_Subregion1</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasSubregion"/>
+        <IRI>#Data_Region</IRI>
+        <IRI>#Data_Subregion2</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#Data_String</IRI>
+        <Literal>String</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#Data_Subregion1</IRI>
+        <Literal>Subregion 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasParentRegion"/>
+        <IRI>#Data_Subregion1</IRI>
+        <IRI>#Data_Region</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasSubregion"/>
+        <IRI>#Data_Subregion1</IRI>
+        <IRI>#Data_Subregion2</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#Data_Subregion2</IRI>
+        <Literal>Subregion 2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasParentRegion"/>
+        <IRI>#Data_Subregion2</IRI>
+        <IRI>#Data_Subregion1</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#Data_Year</IRI>
+        <Literal>Year</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#Double</IRI>
+        <Literal>A floating-point number.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#InputType</IRI>
+        <Literal>The input type for a visualization tool. For tools which need tabledata input, one input type usually refers to one table column.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#InputType</IRI>
+        <Literal>Input Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#Integer</IRI>
+        <Literal>A whole number.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasMinCardinality"/>
+        <IRI>#MicEx_InputBinary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#MicEx_InputBinary</IRI>
+        <Literal>toBinary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasScaletype"/>
+        <IRI>#MicEx_InputBinary</IRI>
+        <IRI>#Scaletype_Ordinal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasMinCardinality"/>
+        <IRI>#MicEx_InputVariable</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#MicEx_InputVariable</IRI>
+        <Literal>variable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasScaletype"/>
+        <IRI>#MicEx_InputVariable</IRI>
+        <IRI>#Scaletype_Nominal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasDatatype"/>
+        <IRI>#MicEx_InputYear</IRI>
+        <IRI>#Data_Year</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasMaxCardinality"/>
+        <IRI>#MicEx_InputYear</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasMinCardinality"/>
+        <IRI>#MicEx_InputYear</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#MicEx_InputYear</IRI>
+        <Literal>year</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasScaletype"/>
+        <IRI>#MicEx_InputYear</IRI>
+        <IRI>#Scaletype_Quantitative</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#Primitive_Data_Types</IRI>
+        <Literal>Basic Datatypes like Integer, Double, String...</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Primitive_Data_Types</IRI>
+        <Literal>Primitive Data Types</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#Scaletype_Nominal</IRI>
+        <Literal>Nominal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#Scaletype_Ordinal</IRI>
+        <Literal>Ordinal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#Scaletype_Quantitative</IRI>
+        <Literal>Quantitative</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#Slivisu</IRI>
+        <Literal>Slivisu</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#needsInputType"/>
+        <IRI>#Slivisu</IRI>
+        <IRI>#Slivisu_InputAge</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#needsInputType"/>
+        <IRI>#Slivisu</IRI>
+        <IRI>#Slivisu_InputAgeMax</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#needsInputType"/>
+        <IRI>#Slivisu</IRI>
+        <IRI>#Slivisu_InputAgeMin</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#needsInputType"/>
+        <IRI>#Slivisu</IRI>
+        <IRI>#Slivisu_InputCategory</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#needsInputType"/>
+        <IRI>#Slivisu</IRI>
+        <IRI>#Slivisu_InputLat</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#needsInputType"/>
+        <IRI>#Slivisu</IRI>
+        <IRI>#Slivisu_InputLon</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#needsInputType"/>
+        <IRI>#Slivisu</IRI>
+        <IRI>#Slivisu_InputRegion</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#needsInputType"/>
+        <IRI>#Slivisu</IRI>
+        <IRI>#Slivisu_InputSubregion1</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#needsInputType"/>
+        <IRI>#Slivisu</IRI>
+        <IRI>#Slivisu_InputSubregion2</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#needsInputType"/>
+        <IRI>#Slivisu</IRI>
+        <IRI>#Slivisu_InputYear</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasDatatype"/>
+        <IRI>#Slivisu_InputAge</IRI>
+        <IRI>#Data_Age</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasMaxCardinality"/>
+        <IRI>#Slivisu_InputAge</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasMinCardinality"/>
+        <IRI>#Slivisu_InputAge</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#Slivisu_InputAge</IRI>
+        <Literal>age</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasScaletype"/>
+        <IRI>#Slivisu_InputAge</IRI>
+        <IRI>#Scaletype_Quantitative</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasDatatype"/>
+        <IRI>#Slivisu_InputAgeMax</IRI>
+        <IRI>#Data_AgeMax</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasMaxCardinality"/>
+        <IRI>#Slivisu_InputAgeMax</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasMinCardinality"/>
+        <IRI>#Slivisu_InputAgeMax</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#Slivisu_InputAgeMax</IRI>
+        <Literal>ageMax</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasScaletype"/>
+        <IRI>#Slivisu_InputAgeMax</IRI>
+        <IRI>#Scaletype_Quantitative</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasDatatype"/>
+        <IRI>#Slivisu_InputAgeMin</IRI>
+        <IRI>#Data_AgeMin</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasMaxCardinality"/>
+        <IRI>#Slivisu_InputAgeMin</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasMinCardinality"/>
+        <IRI>#Slivisu_InputAgeMin</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#Slivisu_InputAgeMin</IRI>
+        <Literal>ageMin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasScaletype"/>
+        <IRI>#Slivisu_InputAgeMin</IRI>
+        <IRI>#Scaletype_Quantitative</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasDatatype"/>
+        <IRI>#Slivisu_InputCategory</IRI>
+        <IRI>#Data_String</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasMaxCardinality"/>
+        <IRI>#Slivisu_InputCategory</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasMinCardinality"/>
+        <IRI>#Slivisu_InputCategory</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#Slivisu_InputCategory</IRI>
+        <Literal>category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasScaletype"/>
+        <IRI>#Slivisu_InputCategory</IRI>
+        <IRI>#Scaletype_Nominal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasDatatype"/>
+        <IRI>#Slivisu_InputLat</IRI>
+        <IRI>#Data_Lat</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasMaxCardinality"/>
+        <IRI>#Slivisu_InputLat</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasMinCardinality"/>
+        <IRI>#Slivisu_InputLat</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#Slivisu_InputLat</IRI>
+        <Literal>latitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasScaletype"/>
+        <IRI>#Slivisu_InputLat</IRI>
+        <IRI>#Scaletype_Ordinal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasDatatype"/>
+        <IRI>#Slivisu_InputLon</IRI>
+        <IRI>#Data_Lon</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasMaxCardinality"/>
+        <IRI>#Slivisu_InputLon</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasMinCardinality"/>
+        <IRI>#Slivisu_InputLon</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#Slivisu_InputLon</IRI>
+        <Literal>Longitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasScaletype"/>
+        <IRI>#Slivisu_InputLon</IRI>
+        <IRI>#Scaletype_Ordinal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasDatatype"/>
+        <IRI>#Slivisu_InputRegion</IRI>
+        <IRI>#Data_Region</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasMaxCardinality"/>
+        <IRI>#Slivisu_InputRegion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasMinCardinality"/>
+        <IRI>#Slivisu_InputRegion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#Slivisu_InputRegion</IRI>
+        <Literal>region</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasScaletype"/>
+        <IRI>#Slivisu_InputRegion</IRI>
+        <IRI>#Scaletype_Nominal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasSubregion"/>
+        <IRI>#Slivisu_InputRegion</IRI>
+        <IRI>#Slivisu_InputSubregion1</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasDatatype"/>
+        <IRI>#Slivisu_InputSubregion1</IRI>
+        <IRI>#Data_Subregion1</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasMaxCardinality"/>
+        <IRI>#Slivisu_InputSubregion1</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasMinCardinality"/>
+        <IRI>#Slivisu_InputSubregion1</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#Slivisu_InputSubregion1</IRI>
+        <Literal>subregion1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasParentRegion"/>
+        <IRI>#Slivisu_InputSubregion1</IRI>
+        <IRI>#Slivisu_InputRegion</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasScaletype"/>
+        <IRI>#Slivisu_InputSubregion1</IRI>
+        <IRI>#Scaletype_Nominal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasDatatype"/>
+        <IRI>#Slivisu_InputSubregion2</IRI>
+        <IRI>#Data_Subregion2</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasMaxCardinality"/>
+        <IRI>#Slivisu_InputSubregion2</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasMinCardinality"/>
+        <IRI>#Slivisu_InputSubregion2</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#Slivisu_InputSubregion2</IRI>
+        <Literal>Subregion2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasParentRegion"/>
+        <IRI>#Slivisu_InputSubregion2</IRI>
+        <IRI>#Slivisu_InputSubregion1</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasScaletype"/>
+        <IRI>#Slivisu_InputSubregion2</IRI>
+        <IRI>#Scaletype_Nominal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasDatatype"/>
+        <IRI>#Slivisu_InputYear</IRI>
+        <IRI>#Data_Year</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasMaxCardinality"/>
+        <IRI>#Slivisu_InputYear</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasMinCardinality"/>
+        <IRI>#Slivisu_InputYear</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasName"/>
+        <IRI>#Slivisu_InputYear</IRI>
+        <Literal>year</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasScaletype"/>
+        <IRI>#Slivisu_InputYear</IRI>
+        <IRI>#Scaletype_Quantitative</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#String</IRI>
+        <Literal>A sequence of characters.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#VisTool</IRI>
+        <Literal>Visualization Tool</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#VisTool</IRI>
+        <Literal>A Software for visualizing data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#canHaveInputType</IRI>
+        <Literal>an input type which is optional for a vis tool</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#hasDatatype</IRI>
+        <Literal>refers to the semantic data type for an input type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#hasInputType</IRI>
+        <Literal>the input type from a dataset (usually a table column)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasMaxCardinality</IRI>
+        <Literal>the maximum cardinality allowed for an input type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasMinCardinality</IRI>
+        <Literal>the minimum cardinality needed for an input type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasName</IRI>
+        <Literal>the name of an input type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#hasParentRegion</IRI>
+        <Literal>defines the parent region of a subregion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#hasPrimitiveType</IRI>
+        <Literal>the basic datatype of an input type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#hasScaletype</IRI>
+        <Literal>the scale type for an input type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#hasSubregion</IRI>
+        <Literal>defines the subregion of a region</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#maxAge</IRI>
+        <Literal>If an Entitiy has an uncertain age value or an age span, this defines the maximum value.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#maxAge</IRI>
+        <Literal>Maximum Age</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#minAge</IRI>
+        <Literal>If an Entitiy has an uncertain age value or an age span, this defines the maximum value.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#minAge</IRI>
+        <Literal>Minimum Age</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#needsInputType</IRI>
+        <Literal>an input type needed by the vis tool</Literal>
+    </AnnotationAssertion>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#canHaveInputType"/>
+        <IRI>#InputType</IRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#hasDatatype"/>
+        <AbbreviatedIRI>viso:Data</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#hasMaxCardinality"/>
+        <AbbreviatedIRI>xsd:int</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#hasMinCardinality"/>
+        <AbbreviatedIRI>xsd:int</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#hasName"/>
+        <AbbreviatedIRI>xsd:Name</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#hasName"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#hasParentRegion"/>
+        <AbbreviatedIRI>resource:SIO_000414</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#hasScaletype"/>
+        <AbbreviatedIRI>viso:Scale_of_Measurement</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#hasSubregion"/>
+        <AbbreviatedIRI>resource:SIO_000414</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#needsInputType"/>
+        <IRI>#InputType</IRI>
+    </AnnotationPropertyRange>
+</Ontology>
 
 
 
