@@ -904,8 +904,8 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 
     <owl:NamedIndividual rdf:about="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Slivisu_InputLon">
         <rdf:type rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#InputType"/>
-        <ToolOntology:hasPrimitiveType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Lon"/>
         <ToolOntology:hasDatatype rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Lon"/>
+        <ToolOntology:hasPrimitiveType rdf:resource="https://github.com/DaRa42/ToolOntology/blob/master/ToolOntology.owl#Data_Double"/>
         <ToolOntology:hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ToolOntology:hasMaxCardinality>
         <ToolOntology:hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ToolOntology:hasMinCardinality>
         <ToolOntology:hasName>Longitude</ToolOntology:hasName>
