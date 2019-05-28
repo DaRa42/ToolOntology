@@ -969,7 +969,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
         <NamedIndividual IRI="#Slivisu_InputLon"/>
-        <Literal>longitude</Literal>
+        <Literal>Longitude</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMaxCardinality"/>
