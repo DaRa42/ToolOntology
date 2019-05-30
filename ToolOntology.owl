@@ -101,6 +101,9 @@
         <Class IRI="#String"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Subregion"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#VisTool"/>
     </Declaration>
     <Declaration>
@@ -385,6 +388,10 @@
         <Class IRI="#Primitive_Data_Types"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Subregion"/>
+        <Class abbreviatedIRI="resource:SIO_000414"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#VisTool"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#needsInputType"/>
@@ -451,7 +458,7 @@
         <NamedIndividual IRI="#Data_String"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="resource:SIO_000414"/>
+        <Class IRI="#Subregion"/>
         <NamedIndividual IRI="#Data_Subregion"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -930,7 +937,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
         <NamedIndividual IRI="#Slivisu_InputRegion"/>
-        <Literal>region</Literal>
+        <Literal>Region</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMaxCardinality"/>
@@ -1337,6 +1344,11 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
         <AnnotationProperty abbreviatedIRI="terms:description"/>
         <IRI>#String</IRI>
         <Literal>A sequence of characters.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#Subregion</IRI>
+        <Literal>a part of a region</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
