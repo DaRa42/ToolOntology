@@ -612,6 +612,11 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#needsInputType"/>
         <NamedIndividual IRI="#Slivisu"/>
+        <NamedIndividual IRI="#Slivisu_InputSubregion"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#needsInputType"/>
+        <NamedIndividual IRI="#Slivisu"/>
         <NamedIndividual IRI="#Slivisu_InputYear"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
