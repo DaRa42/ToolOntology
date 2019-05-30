@@ -179,10 +179,10 @@
         <NamedIndividual IRI="#Data_Integer"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Data_Lat"/>
+        <NamedIndividual IRI="#Data_Latitude"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Data_Lon"/>
+        <NamedIndividual IRI="#Data_Longitude"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Data_Region"/>
@@ -442,11 +442,11 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="resource:SIO_000319"/>
-        <NamedIndividual IRI="#Data_Lat"/>
+        <NamedIndividual IRI="#Data_Latitude"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="resource:SIO_000318"/>
-        <NamedIndividual IRI="#Data_Lon"/>
+        <NamedIndividual IRI="#Data_Longitude"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="resource:SIO_000414"/>
@@ -689,7 +689,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDatatype"/>
         <NamedIndividual IRI="#Slivisu_InputLat"/>
-        <NamedIndividual IRI="#Data_Lat"/>
+        <NamedIndividual IRI="#Data_Latitude"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasPrimitiveType"/>
@@ -704,7 +704,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDatatype"/>
         <NamedIndividual IRI="#Slivisu_InputLon"/>
-        <NamedIndividual IRI="#Data_Lon"/>
+        <NamedIndividual IRI="#Data_Longitude"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasPrimitiveType"/>
@@ -803,12 +803,12 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
-        <NamedIndividual IRI="#Data_Lat"/>
+        <NamedIndividual IRI="#Data_Latitude"/>
         <Literal>Latitude</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
-        <NamedIndividual IRI="#Data_Lon"/>
+        <NamedIndividual IRI="#Data_Longitude"/>
         <Literal>Longitude</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
