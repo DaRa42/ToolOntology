@@ -167,12 +167,6 @@
         <NamedIndividual IRI="#Data_Age"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Data_AgeMax"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Data_AgeMin"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Data_Double"/>
     </Declaration>
     <Declaration>
@@ -185,16 +179,19 @@
         <NamedIndividual IRI="#Data_Longitude"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Data_Maximum_Age"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Data_Minimum_Age"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Data_Region"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Data_String"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Data_Subregion1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Data_Subregion2"/>
+        <NamedIndividual IRI="#Data_Subregion"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Data_Year"/>
@@ -242,10 +239,7 @@
         <NamedIndividual IRI="#Slivisu_InputRegion"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Slivisu_InputSubregion1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Slivisu_InputSubregion2"/>
+        <NamedIndividual IRI="#Slivisu_InputSubregion"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Slivisu_InputYear"/>
@@ -425,14 +419,6 @@
         <NamedIndividual IRI="#Data_Age"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#maxAge"/>
-        <NamedIndividual IRI="#Data_AgeMax"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#minAge"/>
-        <NamedIndividual IRI="#Data_AgeMin"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Double"/>
         <NamedIndividual IRI="#Data_Double"/>
     </ClassAssertion>
@@ -449,6 +435,14 @@
         <NamedIndividual IRI="#Data_Longitude"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#maxAge"/>
+        <NamedIndividual IRI="#Data_Maximum_Age"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#minAge"/>
+        <NamedIndividual IRI="#Data_Minimum_Age"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="resource:SIO_000414"/>
         <NamedIndividual IRI="#Data_Region"/>
     </ClassAssertion>
@@ -458,11 +452,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="resource:SIO_000414"/>
-        <NamedIndividual IRI="#Data_Subregion1"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="resource:SIO_000414"/>
-        <NamedIndividual IRI="#Data_Subregion2"/>
+        <NamedIndividual IRI="#Data_Subregion"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://www.w3.org/2006/time#generalYear"/>
@@ -526,26 +516,12 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#InputType"/>
-        <NamedIndividual IRI="#Slivisu_InputSubregion1"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#InputType"/>
-        <NamedIndividual IRI="#Slivisu_InputSubregion2"/>
+        <NamedIndividual IRI="#Slivisu_InputSubregion"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#InputType"/>
         <NamedIndividual IRI="#Slivisu_InputYear"/>
     </ClassAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasSubregion"/>
-        <NamedIndividual IRI="#Data_Region"/>
-        <NamedIndividual IRI="#Data_Subregion1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasSubregion"/>
-        <NamedIndividual IRI="#Data_Region"/>
-        <NamedIndividual IRI="#Data_Subregion2"/>
-    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#canHaveInputType"/>
         <NamedIndividual IRI="#MicEx"/>
@@ -629,16 +605,6 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#needsInputType"/>
         <NamedIndividual IRI="#Slivisu"/>
-        <NamedIndividual IRI="#Slivisu_InputSubregion1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#needsInputType"/>
-        <NamedIndividual IRI="#Slivisu"/>
-        <NamedIndividual IRI="#Slivisu_InputSubregion2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#needsInputType"/>
-        <NamedIndividual IRI="#Slivisu"/>
         <NamedIndividual IRI="#Slivisu_InputYear"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -659,7 +625,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDatatype"/>
         <NamedIndividual IRI="#Slivisu_InputAgeMax"/>
-        <NamedIndividual IRI="#Data_AgeMax"/>
+        <NamedIndividual IRI="#Data_Maximum_Age"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasPrimitiveType"/>
@@ -674,7 +640,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDatatype"/>
         <NamedIndividual IRI="#Slivisu_InputAgeMin"/>
-        <NamedIndividual IRI="#Data_AgeMin"/>
+        <NamedIndividual IRI="#Data_Minimum_Age"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasPrimitiveType"/>
@@ -733,32 +699,17 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDatatype"/>
-        <NamedIndividual IRI="#Slivisu_InputSubregion1"/>
-        <NamedIndividual IRI="#Data_Subregion1"/>
+        <NamedIndividual IRI="#Slivisu_InputSubregion"/>
+        <NamedIndividual IRI="#Data_Subregion"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasPrimitiveType"/>
-        <NamedIndividual IRI="#Slivisu_InputSubregion1"/>
+        <NamedIndividual IRI="#Slivisu_InputSubregion"/>
         <NamedIndividual IRI="#Data_String"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasScaletype"/>
-        <NamedIndividual IRI="#Slivisu_InputSubregion1"/>
-        <NamedIndividual IRI="#Scaletype_Nominal"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasDatatype"/>
-        <NamedIndividual IRI="#Slivisu_InputSubregion2"/>
-        <NamedIndividual IRI="#Data_Subregion2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPrimitiveType"/>
-        <NamedIndividual IRI="#Slivisu_InputSubregion2"/>
-        <NamedIndividual IRI="#Data_String"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasScaletype"/>
-        <NamedIndividual IRI="#Slivisu_InputSubregion2"/>
+        <NamedIndividual IRI="#Slivisu_InputSubregion"/>
         <NamedIndividual IRI="#Scaletype_Nominal"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -783,16 +734,6 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
-        <NamedIndividual IRI="#Data_AgeMax"/>
-        <Literal>Maximum Age</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasName"/>
-        <NamedIndividual IRI="#Data_AgeMin"/>
-        <Literal>Minimum Age</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasName"/>
         <NamedIndividual IRI="#Data_Double"/>
         <Literal>Double</Literal>
     </DataPropertyAssertion>
@@ -813,6 +754,16 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Data_Maximum_Age"/>
+        <Literal>Maximum_Age</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Data_Minimum_Age"/>
+        <Literal>Minimum_Age</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
         <NamedIndividual IRI="#Data_Region"/>
         <Literal>Region</Literal>
     </DataPropertyAssertion>
@@ -823,13 +774,8 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
-        <NamedIndividual IRI="#Data_Subregion1"/>
-        <Literal>Subregion 1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasName"/>
-        <NamedIndividual IRI="#Data_Subregion2"/>
-        <Literal>Subregion 2</Literal>
+        <NamedIndividual IRI="#Data_Subregion"/>
+        <Literal>Subregion</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
@@ -988,33 +934,18 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMaxCardinality"/>
-        <NamedIndividual IRI="#Slivisu_InputSubregion1"/>
+        <NamedIndividual IRI="#Slivisu_InputSubregion"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMinCardinality"/>
-        <NamedIndividual IRI="#Slivisu_InputSubregion1"/>
+        <NamedIndividual IRI="#Slivisu_InputSubregion"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
-        <NamedIndividual IRI="#Slivisu_InputSubregion1"/>
-        <Literal>subregion1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasMaxCardinality"/>
-        <NamedIndividual IRI="#Slivisu_InputSubregion2"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasMinCardinality"/>
-        <NamedIndividual IRI="#Slivisu_InputSubregion2"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasName"/>
-        <NamedIndividual IRI="#Slivisu_InputSubregion2"/>
-        <Literal>subregion2</Literal>
+        <NamedIndividual IRI="#Slivisu_InputSubregion"/>
+        <Literal>Subregion</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMaxCardinality"/>
