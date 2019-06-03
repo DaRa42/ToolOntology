@@ -233,6 +233,12 @@
         <NamedIndividual IRI="#Slivisu_InputAgeMin"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Slivisu_InputCategoryMax"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Slivisu_InputCategoryMin"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Slivisu_InputLat"/>
     </Declaration>
     <Declaration>
@@ -511,6 +517,14 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#InputType"/>
+        <NamedIndividual IRI="#Slivisu_InputCategoryMax"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="#Slivisu_InputCategoryMin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
         <NamedIndividual IRI="#Slivisu_InputLat"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -662,6 +676,26 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasScaletype"/>
         <NamedIndividual IRI="#Slivisu_InputAgeMin"/>
+        <NamedIndividual IRI="#Scaletype_Quantitative"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDatatype"/>
+        <NamedIndividual IRI="#Slivisu_InputCategoryMax"/>
+        <NamedIndividual IRI="#Data_Double"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasScaletype"/>
+        <NamedIndividual IRI="#Slivisu_InputCategoryMax"/>
+        <NamedIndividual IRI="#Scaletype_Quantitative"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDatatype"/>
+        <NamedIndividual IRI="#Slivisu_InputCategoryMin"/>
+        <NamedIndividual IRI="#Data_Double"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasScaletype"/>
+        <NamedIndividual IRI="#Slivisu_InputCategoryMin"/>
         <NamedIndividual IRI="#Scaletype_Quantitative"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -901,6 +935,36 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMaxCardinality"/>
+        <NamedIndividual IRI="#Slivisu_InputCategoryMax"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinCardinality"/>
+        <NamedIndividual IRI="#Slivisu_InputCategoryMax"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Slivisu_InputCategoryMax"/>
+        <Literal>Category Min</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxCardinality"/>
+        <NamedIndividual IRI="#Slivisu_InputCategoryMin"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinCardinality"/>
+        <NamedIndividual IRI="#Slivisu_InputCategoryMin"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Slivisu_InputCategoryMin"/>
+        <Literal>Category Min</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxCardinality"/>
         <NamedIndividual IRI="#Slivisu_InputLat"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
@@ -912,7 +976,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
         <NamedIndividual IRI="#Slivisu_InputLat"/>
-        <Literal>latitude</Literal>
+        <Literal>Latitude</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMaxCardinality"/>
