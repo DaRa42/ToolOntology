@@ -934,7 +934,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
         <NamedIndividual IRI="#Slivisu_Input_Category_Max"/>
-        <Literal>Category Min</Literal>
+        <Literal>Category Max</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMaxCardinality"/>
