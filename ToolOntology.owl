@@ -702,7 +702,7 @@
         <NamedIndividual IRI="#Data_Category_Min"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasDatatype"/>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
         <NamedIndividual IRI="#Slivisu_Input_Category_Min"/>
         <NamedIndividual IRI="#Data_Double"/>
     </ObjectPropertyAssertion>
