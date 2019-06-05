@@ -167,7 +167,7 @@
         <DataProperty IRI="#hasName"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Data_Age"/>
+        <NamedIndividual IRI="#Data_Age_Error"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Data_Double"/>
@@ -183,6 +183,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Data_Maximum_Age"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Data_Mean_Age"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Data_Minimum_Age"/>
@@ -203,13 +206,13 @@
         <NamedIndividual IRI="#MicEx"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#MicEx_InputBinary"/>
+        <NamedIndividual IRI="#MicEx_Input_Binary"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#MicEx_InputVariable"/>
+        <NamedIndividual IRI="#MicEx_Input_Variable"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#MicEx_InputYear"/>
+        <NamedIndividual IRI="#MicEx_Input_Year"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Scaletype_Nominal"/>
@@ -224,34 +227,43 @@
         <NamedIndividual IRI="#Slivisu"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Slivisu_InputAge"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Err"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Slivisu_InputAgeMax"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Max"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Slivisu_InputAgeMin"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Mean"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Slivisu_InputCategoryMax"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Min"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Slivisu_InputCategoryMin"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Err"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Slivisu_InputLat"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Max"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Slivisu_InputLon"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Mean"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Slivisu_InputRegion"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Min"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Slivisu_InputSubregion"/>
+        <NamedIndividual IRI="#Slivisu_Input_ID"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Slivisu_InputYear"/>
+        <NamedIndividual IRI="#Slivisu_Input_Lat"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Slivisu_Input_Lon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Slivisu_Input_Region"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Slivisu_Input_Subregion"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:identifier"/>
@@ -428,8 +440,8 @@
         <Class abbreviatedIRI="resource:SIO_000319"/>
     </DisjointClasses>
     <ClassAssertion>
-        <Class abbreviatedIRI="resource:SIO_001013"/>
-        <NamedIndividual IRI="#Data_Age"/>
+        <Class IRI="#Integer"/>
+        <NamedIndividual IRI="#Data_Age_Error"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Double"/>
@@ -450,6 +462,10 @@
     <ClassAssertion>
         <Class IRI="#maxAge"/>
         <NamedIndividual IRI="#Data_Maximum_Age"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="resource:SIO_001013"/>
+        <NamedIndividual IRI="#Data_Mean_Age"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#minAge"/>
@@ -477,15 +493,15 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#InputType"/>
-        <NamedIndividual IRI="#MicEx_InputBinary"/>
+        <NamedIndividual IRI="#MicEx_Input_Binary"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#InputType"/>
-        <NamedIndividual IRI="#MicEx_InputVariable"/>
+        <NamedIndividual IRI="#MicEx_Input_Variable"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#InputType"/>
-        <NamedIndividual IRI="#MicEx_InputYear"/>
+        <NamedIndividual IRI="#MicEx_Input_Year"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="viso:Nominal_Scale_of_Measurement"/>
@@ -505,278 +521,345 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#InputType"/>
-        <NamedIndividual IRI="#Slivisu_InputAge"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Err"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#InputType"/>
-        <NamedIndividual IRI="#Slivisu_InputAgeMax"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Max"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#InputType"/>
-        <NamedIndividual IRI="#Slivisu_InputAgeMin"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Mean"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#InputType"/>
-        <NamedIndividual IRI="#Slivisu_InputCategoryMax"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Min"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#InputType"/>
-        <NamedIndividual IRI="#Slivisu_InputCategoryMin"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Err"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#InputType"/>
-        <NamedIndividual IRI="#Slivisu_InputLat"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Max"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#InputType"/>
-        <NamedIndividual IRI="#Slivisu_InputLon"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Mean"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#InputType"/>
-        <NamedIndividual IRI="#Slivisu_InputRegion"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Min"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#InputType"/>
-        <NamedIndividual IRI="#Slivisu_InputSubregion"/>
+        <NamedIndividual IRI="#Slivisu_Input_ID"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#InputType"/>
-        <NamedIndividual IRI="#Slivisu_InputYear"/>
+        <NamedIndividual IRI="#Slivisu_Input_Lat"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="#Slivisu_Input_Lon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="#Slivisu_Input_Region"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputType"/>
+        <NamedIndividual IRI="#Slivisu_Input_Subregion"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#canHaveInputType"/>
         <NamedIndividual IRI="#MicEx"/>
-        <NamedIndividual IRI="#MicEx_InputBinary"/>
+        <NamedIndividual IRI="#MicEx_Input_Binary"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#needsInputType"/>
         <NamedIndividual IRI="#MicEx"/>
-        <NamedIndividual IRI="#MicEx_InputVariable"/>
+        <NamedIndividual IRI="#MicEx_Input_Variable"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#needsInputType"/>
         <NamedIndividual IRI="#MicEx"/>
-        <NamedIndividual IRI="#MicEx_InputYear"/>
+        <NamedIndividual IRI="#MicEx_Input_Year"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasPrimitiveType"/>
-        <NamedIndividual IRI="#MicEx_InputBinary"/>
+        <NamedIndividual IRI="#MicEx_Input_Binary"/>
         <NamedIndividual IRI="#Data_Double"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasScaletype"/>
-        <NamedIndividual IRI="#MicEx_InputBinary"/>
+        <NamedIndividual IRI="#MicEx_Input_Binary"/>
         <NamedIndividual IRI="#Scaletype_Ordinal"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasPrimitiveType"/>
-        <NamedIndividual IRI="#MicEx_InputVariable"/>
+        <NamedIndividual IRI="#MicEx_Input_Variable"/>
         <NamedIndividual IRI="#Data_String"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasScaletype"/>
-        <NamedIndividual IRI="#MicEx_InputVariable"/>
+        <NamedIndividual IRI="#MicEx_Input_Variable"/>
         <NamedIndividual IRI="#Scaletype_Nominal"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDatatype"/>
-        <NamedIndividual IRI="#MicEx_InputYear"/>
+        <NamedIndividual IRI="#MicEx_Input_Year"/>
         <NamedIndividual IRI="#Data_Year"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasPrimitiveType"/>
-        <NamedIndividual IRI="#MicEx_InputYear"/>
+        <NamedIndividual IRI="#MicEx_Input_Year"/>
         <NamedIndividual IRI="#Data_Integer"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasScaletype"/>
-        <NamedIndividual IRI="#MicEx_InputYear"/>
+        <NamedIndividual IRI="#MicEx_Input_Year"/>
         <NamedIndividual IRI="#Scaletype_Quantitative"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#needsInputType"/>
+        <ObjectProperty IRI="#canHaveInputType"/>
         <NamedIndividual IRI="#Slivisu"/>
-        <NamedIndividual IRI="#Slivisu_InputAge"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Err"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canHaveInputType"/>
+        <NamedIndividual IRI="#Slivisu"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Mean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canHaveInputType"/>
+        <NamedIndividual IRI="#Slivisu"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Err"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canHaveInputType"/>
+        <NamedIndividual IRI="#Slivisu"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Mean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canHaveInputType"/>
+        <NamedIndividual IRI="#Slivisu"/>
+        <NamedIndividual IRI="#Slivisu_Input_ID"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#needsInputType"/>
         <NamedIndividual IRI="#Slivisu"/>
-        <NamedIndividual IRI="#Slivisu_InputAgeMax"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Max"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#needsInputType"/>
         <NamedIndividual IRI="#Slivisu"/>
-        <NamedIndividual IRI="#Slivisu_InputAgeMin"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Min"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#needsInputType"/>
         <NamedIndividual IRI="#Slivisu"/>
-        <NamedIndividual IRI="#Slivisu_InputLat"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Max"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#needsInputType"/>
         <NamedIndividual IRI="#Slivisu"/>
-        <NamedIndividual IRI="#Slivisu_InputLon"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Min"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#needsInputType"/>
         <NamedIndividual IRI="#Slivisu"/>
-        <NamedIndividual IRI="#Slivisu_InputRegion"/>
+        <NamedIndividual IRI="#Slivisu_Input_Lat"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#needsInputType"/>
         <NamedIndividual IRI="#Slivisu"/>
-        <NamedIndividual IRI="#Slivisu_InputSubregion"/>
+        <NamedIndividual IRI="#Slivisu_Input_Lon"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#needsInputType"/>
         <NamedIndividual IRI="#Slivisu"/>
-        <NamedIndividual IRI="#Slivisu_InputYear"/>
+        <NamedIndividual IRI="#Slivisu_Input_Region"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#needsInputType"/>
+        <NamedIndividual IRI="#Slivisu"/>
+        <NamedIndividual IRI="#Slivisu_Input_Subregion"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDatatype"/>
-        <NamedIndividual IRI="#Slivisu_InputAge"/>
-        <NamedIndividual IRI="#Data_Age"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Err"/>
+        <NamedIndividual IRI="#Data_Age_Error"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasPrimitiveType"/>
-        <NamedIndividual IRI="#Slivisu_InputAge"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Err"/>
         <NamedIndividual IRI="#Data_Integer"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasScaletype"/>
-        <NamedIndividual IRI="#Slivisu_InputAge"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Err"/>
         <NamedIndividual IRI="#Scaletype_Quantitative"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDatatype"/>
-        <NamedIndividual IRI="#Slivisu_InputAgeMax"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Max"/>
         <NamedIndividual IRI="#Data_Maximum_Age"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasPrimitiveType"/>
-        <NamedIndividual IRI="#Slivisu_InputAgeMax"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Max"/>
         <NamedIndividual IRI="#Data_Integer"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasScaletype"/>
-        <NamedIndividual IRI="#Slivisu_InputAgeMax"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Max"/>
         <NamedIndividual IRI="#Scaletype_Quantitative"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDatatype"/>
-        <NamedIndividual IRI="#Slivisu_InputAgeMin"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Mean"/>
+        <NamedIndividual IRI="#Data_Mean_Age"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Mean"/>
+        <NamedIndividual IRI="#Data_Integer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasScaletype"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Mean"/>
+        <NamedIndividual IRI="#Scaletype_Quantitative"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDatatype"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Min"/>
         <NamedIndividual IRI="#Data_Minimum_Age"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasPrimitiveType"/>
-        <NamedIndividual IRI="#Slivisu_InputAgeMin"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Min"/>
         <NamedIndividual IRI="#Data_Integer"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasScaletype"/>
-        <NamedIndividual IRI="#Slivisu_InputAgeMin"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Min"/>
         <NamedIndividual IRI="#Scaletype_Quantitative"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasDatatype"/>
-        <NamedIndividual IRI="#Slivisu_InputCategoryMax"/>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Err"/>
         <NamedIndividual IRI="#Data_Double"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasScaletype"/>
-        <NamedIndividual IRI="#Slivisu_InputCategoryMax"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Err"/>
         <NamedIndividual IRI="#Scaletype_Quantitative"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasDatatype"/>
-        <NamedIndividual IRI="#Slivisu_InputCategoryMin"/>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Max"/>
         <NamedIndividual IRI="#Data_Double"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasScaletype"/>
-        <NamedIndividual IRI="#Slivisu_InputCategoryMin"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Max"/>
+        <NamedIndividual IRI="#Scaletype_Quantitative"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Mean"/>
+        <NamedIndividual IRI="#Data_Double"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasScaletype"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Mean"/>
         <NamedIndividual IRI="#Scaletype_Quantitative"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDatatype"/>
-        <NamedIndividual IRI="#Slivisu_InputLat"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Min"/>
+        <NamedIndividual IRI="#Data_Double"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasScaletype"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Min"/>
+        <NamedIndividual IRI="#Scaletype_Quantitative"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPrimitiveType"/>
+        <NamedIndividual IRI="#Slivisu_Input_ID"/>
+        <NamedIndividual IRI="#Data_Integer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasScaletype"/>
+        <NamedIndividual IRI="#Slivisu_Input_ID"/>
+        <NamedIndividual IRI="#Scaletype_Ordinal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDatatype"/>
+        <NamedIndividual IRI="#Slivisu_Input_Lat"/>
         <NamedIndividual IRI="#Data_Latitude"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasPrimitiveType"/>
-        <NamedIndividual IRI="#Slivisu_InputLat"/>
+        <NamedIndividual IRI="#Slivisu_Input_Lat"/>
         <NamedIndividual IRI="#Data_Double"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasScaletype"/>
-        <NamedIndividual IRI="#Slivisu_InputLat"/>
+        <NamedIndividual IRI="#Slivisu_Input_Lat"/>
         <NamedIndividual IRI="#Scaletype_Ordinal"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDatatype"/>
-        <NamedIndividual IRI="#Slivisu_InputLon"/>
+        <NamedIndividual IRI="#Slivisu_Input_Lon"/>
         <NamedIndividual IRI="#Data_Longitude"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasPrimitiveType"/>
-        <NamedIndividual IRI="#Slivisu_InputLon"/>
+        <NamedIndividual IRI="#Slivisu_Input_Lon"/>
         <NamedIndividual IRI="#Data_Double"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasScaletype"/>
-        <NamedIndividual IRI="#Slivisu_InputLon"/>
+        <NamedIndividual IRI="#Slivisu_Input_Lon"/>
         <NamedIndividual IRI="#Scaletype_Ordinal"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDatatype"/>
-        <NamedIndividual IRI="#Slivisu_InputRegion"/>
+        <NamedIndividual IRI="#Slivisu_Input_Region"/>
         <NamedIndividual IRI="#Data_Region"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasPrimitiveType"/>
-        <NamedIndividual IRI="#Slivisu_InputRegion"/>
+        <NamedIndividual IRI="#Slivisu_Input_Region"/>
         <NamedIndividual IRI="#Data_String"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasScaletype"/>
-        <NamedIndividual IRI="#Slivisu_InputRegion"/>
+        <NamedIndividual IRI="#Slivisu_Input_Region"/>
         <NamedIndividual IRI="#Scaletype_Nominal"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDatatype"/>
-        <NamedIndividual IRI="#Slivisu_InputSubregion"/>
+        <NamedIndividual IRI="#Slivisu_Input_Subregion"/>
         <NamedIndividual IRI="#Data_Subregion"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasPrimitiveType"/>
-        <NamedIndividual IRI="#Slivisu_InputSubregion"/>
+        <NamedIndividual IRI="#Slivisu_Input_Subregion"/>
         <NamedIndividual IRI="#Data_String"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasScaletype"/>
-        <NamedIndividual IRI="#Slivisu_InputSubregion"/>
+        <NamedIndividual IRI="#Slivisu_Input_Subregion"/>
         <NamedIndividual IRI="#Scaletype_Nominal"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasDatatype"/>
-        <NamedIndividual IRI="#Slivisu_InputYear"/>
-        <NamedIndividual IRI="#Data_Year"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPrimitiveType"/>
-        <NamedIndividual IRI="#Slivisu_InputYear"/>
-        <NamedIndividual IRI="#Data_Integer"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasScaletype"/>
-        <NamedIndividual IRI="#Slivisu_InputYear"/>
-        <NamedIndividual IRI="#Scaletype_Quantitative"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
-        <NamedIndividual IRI="#Data_Age"/>
-        <Literal>Age</Literal>
+        <NamedIndividual IRI="#Data_Age_Error"/>
+        <Literal>Age_Error</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
@@ -802,6 +885,11 @@
         <DataProperty IRI="#hasName"/>
         <NamedIndividual IRI="#Data_Maximum_Age"/>
         <Literal>Maximum_Age</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Data_Mean_Age"/>
+        <Literal>Mean_Age</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
@@ -835,37 +923,37 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMinCardinality"/>
-        <NamedIndividual IRI="#MicEx_InputBinary"/>
+        <NamedIndividual IRI="#MicEx_Input_Binary"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
-        <NamedIndividual IRI="#MicEx_InputBinary"/>
+        <NamedIndividual IRI="#MicEx_Input_Binary"/>
         <Literal>to Binary</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMinCardinality"/>
-        <NamedIndividual IRI="#MicEx_InputVariable"/>
+        <NamedIndividual IRI="#MicEx_Input_Variable"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
-        <NamedIndividual IRI="#MicEx_InputVariable"/>
+        <NamedIndividual IRI="#MicEx_Input_Variable"/>
         <Literal>Variable</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMaxCardinality"/>
-        <NamedIndividual IRI="#MicEx_InputYear"/>
+        <NamedIndividual IRI="#MicEx_Input_Year"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMinCardinality"/>
-        <NamedIndividual IRI="#MicEx_InputYear"/>
+        <NamedIndividual IRI="#MicEx_Input_Year"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
-        <NamedIndividual IRI="#MicEx_InputYear"/>
+        <NamedIndividual IRI="#MicEx_Input_Year"/>
         <Literal>Year</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
@@ -890,153 +978,198 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMaxCardinality"/>
-        <NamedIndividual IRI="#Slivisu_InputAge"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Err"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMinCardinality"/>
-        <NamedIndividual IRI="#Slivisu_InputAge"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Err"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
-        <NamedIndividual IRI="#Slivisu_InputAge"/>
-        <Literal>Age</Literal>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Err"/>
+        <Literal>Age Error</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMaxCardinality"/>
-        <NamedIndividual IRI="#Slivisu_InputAgeMax"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Max"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMinCardinality"/>
-        <NamedIndividual IRI="#Slivisu_InputAgeMax"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Max"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
-        <NamedIndividual IRI="#Slivisu_InputAgeMax"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Max"/>
         <Literal>ageMax</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMaxCardinality"/>
-        <NamedIndividual IRI="#Slivisu_InputAgeMin"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Mean"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMinCardinality"/>
-        <NamedIndividual IRI="#Slivisu_InputAgeMin"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Mean"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
-        <NamedIndividual IRI="#Slivisu_InputAgeMin"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Mean"/>
+        <Literal>Mean Age</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxCardinality"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Min"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinCardinality"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Min"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Slivisu_Input_Age_Min"/>
         <Literal>ageMin</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMaxCardinality"/>
-        <NamedIndividual IRI="#Slivisu_InputCategoryMax"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Err"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMinCardinality"/>
-        <NamedIndividual IRI="#Slivisu_InputCategoryMax"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Err"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Err"/>
+        <Literal>Category Error</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxCardinality"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Max"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinCardinality"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Max"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
-        <NamedIndividual IRI="#Slivisu_InputCategoryMax"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Max"/>
         <Literal>Category Min</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMaxCardinality"/>
-        <NamedIndividual IRI="#Slivisu_InputCategoryMin"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Mean"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMinCardinality"/>
-        <NamedIndividual IRI="#Slivisu_InputCategoryMin"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Mean"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Mean"/>
+        <Literal>Category Mean</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxCardinality"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Min"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinCardinality"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Min"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
-        <NamedIndividual IRI="#Slivisu_InputCategoryMin"/>
+        <NamedIndividual IRI="#Slivisu_Input_Category_Min"/>
         <Literal>Category Min</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMaxCardinality"/>
-        <NamedIndividual IRI="#Slivisu_InputLat"/>
+        <NamedIndividual IRI="#Slivisu_Input_ID"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMinCardinality"/>
-        <NamedIndividual IRI="#Slivisu_InputLat"/>
+        <NamedIndividual IRI="#Slivisu_Input_ID"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Slivisu_Input_ID"/>
+        <Literal>ID</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxCardinality"/>
+        <NamedIndividual IRI="#Slivisu_Input_Lat"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinCardinality"/>
+        <NamedIndividual IRI="#Slivisu_Input_Lat"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
-        <NamedIndividual IRI="#Slivisu_InputLat"/>
+        <NamedIndividual IRI="#Slivisu_Input_Lat"/>
         <Literal>Latitude</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMaxCardinality"/>
-        <NamedIndividual IRI="#Slivisu_InputLon"/>
+        <NamedIndividual IRI="#Slivisu_Input_Lon"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMinCardinality"/>
-        <NamedIndividual IRI="#Slivisu_InputLon"/>
+        <NamedIndividual IRI="#Slivisu_Input_Lon"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
-        <NamedIndividual IRI="#Slivisu_InputLon"/>
+        <NamedIndividual IRI="#Slivisu_Input_Lon"/>
         <Literal>Longitude</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMaxCardinality"/>
-        <NamedIndividual IRI="#Slivisu_InputRegion"/>
+        <NamedIndividual IRI="#Slivisu_Input_Region"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMinCardinality"/>
-        <NamedIndividual IRI="#Slivisu_InputRegion"/>
+        <NamedIndividual IRI="#Slivisu_Input_Region"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
-        <NamedIndividual IRI="#Slivisu_InputRegion"/>
+        <NamedIndividual IRI="#Slivisu_Input_Region"/>
         <Literal>Region</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMaxCardinality"/>
-        <NamedIndividual IRI="#Slivisu_InputSubregion"/>
+        <NamedIndividual IRI="#Slivisu_Input_Subregion"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMinCardinality"/>
-        <NamedIndividual IRI="#Slivisu_InputSubregion"/>
+        <NamedIndividual IRI="#Slivisu_Input_Subregion"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
-        <NamedIndividual IRI="#Slivisu_InputSubregion"/>
+        <NamedIndividual IRI="#Slivisu_Input_Subregion"/>
         <Literal>Subregion</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasMaxCardinality"/>
-        <NamedIndividual IRI="#Slivisu_InputYear"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasMinCardinality"/>
-        <NamedIndividual IRI="#Slivisu_InputYear"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasName"/>
-        <NamedIndividual IRI="#Slivisu_InputYear"/>
-        <Literal>year</Literal>
     </DataPropertyAssertion>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#hasDatatype"/>
