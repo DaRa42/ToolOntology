@@ -30,7 +30,7 @@
     <Import>https://raw.githubusercontent.com/micheldumontier/semanticscience/master/ontology/sio/release/sio-release.owl</Import>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
-        <Literal>This ToolOntology contains descriptions about certain visualization software tools and their needed Data Input like scaletypes, satatypes and semantic requirements.</Literal>
+        <Literal>This ToolOntology contains descriptions about certain visualization software tools and their needed Data Input like scaletypes, datatypes and semantic requirements.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -203,6 +203,9 @@
         <NamedIndividual IRI="#Data_Region"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Data_SequencePart"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Data_String"/>
     </Declaration>
     <Declaration>
@@ -351,6 +354,10 @@
         <Class abbreviatedIRI="resource:SIO_000038"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="resource:SIO_000114"/>
+        <Class abbreviatedIRI="viso:Physical_Data"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="resource:SIO_000318"/>
         <Class abbreviatedIRI="resource:SIO_000013"/>
     </SubClassOf>
@@ -486,6 +493,10 @@
         <NamedIndividual IRI="#Data_Region"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="resource:SIO_000114"/>
+        <NamedIndividual IRI="#Data_SequencePart"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#String"/>
         <NamedIndividual IRI="#Data_String"/>
     </ClassAssertion>
@@ -500,10 +511,6 @@
     <ClassAssertion>
         <Class IRI="#VisTool"/>
         <NamedIndividual IRI="#MicEx"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#InputType"/>
-        <NamedIndividual IRI="#MicEx_Input_Binary"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#InputType"/>
@@ -585,6 +592,11 @@
         <ObjectProperty IRI="#hasScaletype"/>
         <NamedIndividual IRI="#MicEx_Input_Binary"/>
         <NamedIndividual IRI="#Scaletype_Ordinal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDatatype"/>
+        <NamedIndividual IRI="#MicEx_Input_Variable"/>
+        <NamedIndividual IRI="#Data_SequencePart"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasPrimitiveType"/>
@@ -815,6 +827,11 @@
         <DataProperty IRI="#hasName"/>
         <NamedIndividual IRI="#Data_Region"/>
         <Literal>Region</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Data_SequencePart"/>
+        <Literal>SequencePart</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasName"/>
